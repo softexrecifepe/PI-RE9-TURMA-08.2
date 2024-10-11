@@ -1,3 +1,5 @@
+import "./buttons.css"
+
 function Button({stylebutton, text}: {stylebutton:string, text:string}) {
     return(
         <>

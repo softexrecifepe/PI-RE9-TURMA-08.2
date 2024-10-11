@@ -1,4 +1,5 @@
-import Button from "./Buttons";
+import './header.css';
+import Button from "../buttons/Buttons";
 
 function Burguermenu() {
     
@@ -20,15 +21,16 @@ function Header() {
         <>
             <header>
                 <nav className="nav-bar">
-                <Burguermenu/>
-
+                <div className="left-header"><Burguermenu/></div>
+                <div className="center-header">
+                    <div className="logo"></div>
+                </div>
+                <div className="right-header">
                     <div className="buttons-container">
-                        <div className="logo"></div>
-                        <div className="btn">
-                        <Button stylebutton="primary-button button-header" text="Entrar"/>
-                        <Button stylebutton="secundary-button button-header" text="Cadastre-se"/>
+                        <Button stylebutton="primary-button" text="Entrar"/>
+                        <Button stylebutton="secundary-button" text="Cadastre-se"/>
                     </div>
-                    </div>
+                </div>
                 </nav>
             </header>
         </>

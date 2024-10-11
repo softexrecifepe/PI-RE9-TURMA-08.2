@@ -1,0 +1,26 @@
+.buttons-container {
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+  }
+  
+  button {
+    padding: 6px 12px;
+    border-radius: 24px;
+  }
+  
+  button:hover {
+    opacity: 90%;
+  }
+  
+  .primary-button {
+    color: var(--cor-branca);
+    background-color: var(--cor-laranja);
+    border: 1px solid var(--cor-branca);
+  }
+  
+  .secundary-button {
+    color: var(--cor-laranja);
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-laranja);
+  }
