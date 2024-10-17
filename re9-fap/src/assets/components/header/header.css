@@ -14,7 +14,30 @@ header {
     width: 40vw;
     padding: 0 12px;
   }
+
+  .menu-header {
+    text-align: center;
+    margin-left: -12px;
+    margin-top: 4.1vh;
+    padding: 24px 12px;
+    background-color: var(--cor-laranja);
+    color: var(--cor-branca);
+    list-style-type: none;
+    position: absolute;
+    height: calc(100vh - 12vh);
+    width: 40vw;
+    transform: translateX(-100%);
+    transition: all .3s;
+  }
+
+  .menu-header-visible {
+    transform: translateX(0);
+  }
   
+  .menu-header li {
+    margin-bottom: 12px;
+  }
+
   .burguer-menu {
     width: 25px;
     height: 25px;
@@ -49,3 +72,30 @@ header {
     text-align: right;
     padding: 0 12px;
   }
+
+  .logo-right {
+    color: var(--cor-branca);
+    display: none;
+  }
+
+@media screen and (max-width: 860px){
+  .left-header{
+    width: 50vw;
+  }    
+
+  .center-header{
+    display: none;
+  }
+
+  .right-header{
+    width: 50vw;
+  }
+
+  div.buttons-container{
+    display: none;
+  }
+
+  .logo-right{
+    display: block;
+  }
+}
