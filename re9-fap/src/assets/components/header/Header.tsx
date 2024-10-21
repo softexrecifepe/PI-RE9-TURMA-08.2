@@ -1,6 +1,8 @@
 import './header.css';
 import Button from "../buttons/Buttons";
 import { MouseEventHandler } from 'react';
+import logo from '../../img/logo.svg';
+
 
 function Burguermenu({onClick}: {onClick:MouseEventHandler}) {
 
@@ -53,7 +55,9 @@ function Header() {
                     </ul>
                 </div>
                 <div className="center-header">
-                    <div className="logo"></div>
+                    <div className="logo">
+                    <img src= {logo} alt="Logo" />
+                    </div>
                 </div>
                 <div className="right-header">
                     <div className='logo-right'>LOGO</div>
