@@ -1,33 +1,73 @@
+
 header {
-    width: 100vw;
+    width: 100vw;  
+    
+}
   
-  }
-  .nav-bar {
+.nav-bar {
     height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--cor-laranja);
-  }
+    
+}
   
   .left-header {
     width: 40vw;
     padding: 0 12px;
   }
-  
+
+  .menu-header {
+    text-align: center;
+    margin-left: -12px;
+    margin-top: 4.1vh;
+    padding: 24px 12px;
+    background-color: var(--cor-laranja);
+    color: var(--cor-branca);
+    list-style-type: none;
+    position: absolute;
+    height: calc(100vh - 12vh);
+    width: 40vw;
+    transform: translateX(-100%);
+    transition: all .3s;
+  }
+
+  .menu-header-visible {
+    transform: translateX(0);
+  }
+
+  .menu-header li {
+    margin-bottom: 12px;
+  }
+
   .burguer-menu {
+    cursor: pointer;
     width: 25px;
     height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
+  }
     .line-buguer-menu {
       background-color: var(--cor-branca);
       width: 100%;
       height: 2px;
       border-radius: 2px;
+      transition: all .3s;
     }
+  
+
+  #line-1.active{
+    transform: rotate(-45deg) translate(-9px, 8px);
+  }
+
+  #line-2.active{
+    display: none;
+  }
+
+  #line-3.active{
+    transform: rotate(45deg) translate(-7px, -8px);
   }
   
   .center-header {
@@ -43,9 +83,49 @@ header {
     margin-bottom: -30px;
     background-color: var(--cor-laranja);
   }
+
+  .logo img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
   
   .right-header {
     width: 40vw;
     text-align: right;
     padding: 0 12px;
   }
+
+  div.buttons-container button{
+    cursor: pointer;
+  }
+
+  .logo-right {
+    color: var(--cor-branca);
+    display: none;
+  }
+
+@media screen and (max-width: 860px){
+  .left-header{
+    width: 50vw;
+  }    
+
+  .center-header{
+    display: none;
+  }
+
+  .right-header{
+    width: 50vw;
+  }
+
+  div.buttons-container{
+    display: none;
+  }
+
+  .logo-right{
+    display: block;
+  }
+}
