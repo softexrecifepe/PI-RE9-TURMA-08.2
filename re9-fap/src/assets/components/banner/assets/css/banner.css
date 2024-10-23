@@ -1,0 +1,152 @@
+.marketing-agency-container {
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    position: relative;
+  }
+  
+  .marketing-content {
+    color: black;
+    text-align: left;
+    padding: 10px;
+    max-width: 600px;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .logo-title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+  }
+  
+  .agency-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .agency-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 0; 
+  }
+  
+  .agency-subtitle-stack {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; 
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  .agency-subtitle-stack .highlighted-text {
+    color: #ff6600;
+    margin-bottom: 10px;
+  }
+  
+  .learn-more-btn {
+    margin-top: 20px;
+    border: 2px solid #e55b00; 
+    border-radius: 8px; 
+    color: black;
+    padding: 12px 40px; 
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    min-width: 250px; 
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #e55b00; 
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 28px; 
+    font-size: 0.7rem;
+    margin-top: 15px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-icon {
+    margin-right: 10px; 
+    font-size: 1rem; 
+  }
+  
+  @media (max-width: 768px) {
+    .marketing-content {
+      left: 20px; /* Ajusta a posição à esquerda */
+      top: 40%; /* Ajusta a posição vertical */
+      transform: translateY(-40%);
+      max-width: 90%; /* Diminui a largura do conteúdo */
+    }
+    
+    .agency-title {
+      font-size: 1.2rem; /* Diminui o tamanho da fonte */
+    }
+  
+    .agency-subtitle-stack {
+      font-size: 2.5rem; /* Ajusta o tamanho da fonte para mobile */
+    }
+  
+    .learn-more-btn {
+      font-size: 0.9rem; /* Diminui o tamanho do botão */
+      padding: 10px 30px; /* Ajusta o padding */
+      min-width: 200px; /* Ajusta a largura mínima */
+    }
+    
+    .contact-info {
+      font-size: 0.6rem; /* Diminui o tamanho da fonte */
+      gap: 15px; /* Diminui o espaçamento */
+    }
+  
+    .contact-icon {
+      font-size: 0.8rem; /* Diminui o tamanho do ícone */
+    }
+  }
+  
+  /* Para telas muito pequenas (celulares) */
+  @media (max-width: 480px) {
+    .marketing-content {
+      left: 10px; /* Mais à esquerda */
+      max-width: 95%; /* Quase a largura total da tela */
+      text-align: center; /* Centraliza o texto em telas pequenas */
+    }
+  
+    .logo-title-container {
+      justify-content: center; /* Centraliza o logo e o título */
+    }
+  
+    .agency-subtitle-stack {
+      font-size: 2rem; /* Tamanho da fonte ainda menor */
+    }
+  
+    .learn-more-btn {
+      font-size: 0.8rem; /* Menor tamanho de botão */
+      padding: 8px 25px;
+      min-width: 180px;
+    }
+  
+    .contact-info {
+      flex-direction: column; /* Empilha o contato em vez de lado a lado */
+      gap: 10px; /* Reduz o espaçamento entre os itens */
+      font-size: 0.5rem;
+    }
+  
+    .contact-icon {
+      font-size: 0.7rem; /* Ajusta o tamanho dos ícones */
+    }
+  }
