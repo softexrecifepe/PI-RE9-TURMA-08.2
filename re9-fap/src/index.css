@@ -16,6 +16,7 @@ body {
 }
 
 main {
+  width: 100%;
   padding: 0px 24px;
   display: flex;
   flex-direction: column;
@@ -30,4 +31,5 @@ h1 {
 :root {
   --cor-laranja: #fc7f00;
   --cor-branca: #fff;
+  --cor-azul: #012369;
 }
