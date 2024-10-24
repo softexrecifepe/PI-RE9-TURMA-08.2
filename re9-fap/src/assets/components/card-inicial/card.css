@@ -1,47 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    height: 100vh; 
-    padding: 20px;
-}
-
-.container {
-    
-    max-width: 1000px;
+.container-inicial {
     width: 100%;
-    
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.grid-A{
     display: flex;
-    gap: 20px;
-    margin-top: 100px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}    
-.grid-B{
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    justify-content: flex-end;
-    align-items: center;
+    gap: 1.5rem;
 }
 
+.grid-A-iniciais{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4rem;
+    flex-wrap: wrap;
+}    
+.grid-B-iniciais{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4rem;
+    flex-wrap: wrap;
+}
 
 /* Estilos para os cards */
-.card {
+.card-iniciais {
     background-color: #e0e0e0;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -50,38 +36,34 @@ h1 {
 }
 
 /* Border-radius específico para cada card */
-.card:nth-child(1) {
+.card-iniciais:nth-child(1) {
     border-top-right-radius: 30px; /* Somente canto superior direito */
     
 }
 
-.card:nth-child(2) {
+.card-iniciais:nth-child(2) {
     border-bottom-left-radius: 30px; /* Somente canto inferior esquerdo */
 }
 
-.card:nth-child(3) {
+.card-iniciais:nth-child(3) {
     border-bottom-right-radius: 30px; /* Somente canto inferior direito */
     
 }
 
-.card:nth-child(4) {
+.card-iniciais:nth-child(4) {
     border-top-left-radius: 30px; /* Somente canto superior esquerdo */
 }  
 
-h2 {
-    margin-bottom: 15px;
-    font-size: 1.25rem;
-}
+@media screen and (max-width: 815px) {
+    .grid-A-iniciais {
+        padding-right: 0;
+    }
 
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
+    .grid-B-iniciais {
+        padding-left: 0;
+    }
 
-/* Responsividade */
-@media (max-width: 768px) {
-   
-    .grid-A, .grid-B {
-        grid-template-columns: 1fr; /* Ajusta as grids para 1 coluna no mobile */
+    .card-iniciais {
+        width: 100%;
     }
 }

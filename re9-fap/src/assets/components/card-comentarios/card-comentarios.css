@@ -1,0 +1,37 @@
+.container-comentarios {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+
+.container-comentarios h1 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.wrapper-comentarios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-coments {
+  background-color: white;
+  padding: 10px;
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-coments:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
