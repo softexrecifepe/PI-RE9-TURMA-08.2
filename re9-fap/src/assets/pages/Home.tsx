@@ -1,6 +1,5 @@
 import Header from "../components/header/Header";
 import Card from "../components/card-inicial/Card";
-import Footer from "../components/footer/Footer";
 
 function Home() {
     
@@ -8,7 +7,6 @@ function Home() {
         <>
             <Header/>
             <Card/>
-            <Footer/>
         </>
     )
 }
