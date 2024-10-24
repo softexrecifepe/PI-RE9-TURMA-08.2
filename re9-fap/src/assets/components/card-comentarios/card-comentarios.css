@@ -4,11 +4,6 @@
   padding-top: 30px;
 }
 
-.container-comentarios h1 {
-  font-size: 2.5rem;
-  color: black;
-}
-
 .wrapper-comentarios {
   display: flex;
   justify-content: center;

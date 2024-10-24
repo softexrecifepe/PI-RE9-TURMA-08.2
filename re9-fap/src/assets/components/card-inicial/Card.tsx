@@ -23,13 +23,13 @@ const Card: React.FC = () => {
         </section>
         <section className="grid-B-iniciais">
           <article className="card-iniciais">
-            <h2>Destaque de algumas empresas cadastradas</h2>
+            <h2>Empresas destaque</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ante ac tincidunt mattis. Aenean nisi erat, ultricies vitae fringilla sed, convallis pretium purus.
             </p>
           </article>
           <article className="card-iniciais">
-            <h2>Destaque de algumas instituições cadastradas</h2>
+            <h2>Instituições destaque</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ante ac tincidunt mattis. Aenean nisi erat, ultricies vitae fringilla sed, convallis pretium purus.
             </p>
