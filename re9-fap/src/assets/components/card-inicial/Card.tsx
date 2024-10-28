@@ -6,36 +6,36 @@ const Card: React.FC = () => {
       <header>
         <h1>Conexões que transformam</h1>
       </header>
-      <main className="container">
-        <section className="grid-A">
-          <article className="card">
+      <div className="container-inicial">
+        <section className="grid-A-iniciais">
+          <article className="card-iniciais">
             <h2>Vantagens da parceria</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ante ac tincidunt mattis. Aenean nisi erat, ultricies vitae fringilla sed, convallis pretium purus.
             </p>
           </article>
-          <article className="card">
+          <article className="card-iniciais">
             <h2>Dados das parcerias</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ante ac tincidunt mattis. Aenean nisi erat, ultricies vitae fringilla sed, convallis pretium purus.
             </p>
           </article>
         </section>
-        <section className="grid-B">
-          <article className="card">
-            <h2>Destaque de algumas empresas cadastradas</h2>
+        <section className="grid-B-iniciais">
+          <article className="card-iniciais">
+            <h2>Empresas destaque</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ante ac tincidunt mattis. Aenean nisi erat, ultricies vitae fringilla sed, convallis pretium purus.
             </p>
           </article>
-          <article className="card">
-            <h2>Destaque de algumas instituições cadastradas</h2>
+          <article className="card-iniciais">
+            <h2>Instituições destaque</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare ante ac tincidunt mattis. Aenean nisi erat, ultricies vitae fringilla sed, convallis pretium purus.
             </p>
           </article>
         </section>
-      </main>
+      </div>
     </div>
   );
 };
