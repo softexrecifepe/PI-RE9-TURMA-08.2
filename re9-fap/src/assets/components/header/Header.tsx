@@ -1,7 +1,7 @@
 import './header.css';
 import Button from "../buttons/Buttons";
 import { MouseEventHandler } from 'react';
-import logo from '../../img/logo.svg';
+import logo from '../../img/logo-edit.png';
 import logocompleta from '../../img/logocompleta.png';
 
 
