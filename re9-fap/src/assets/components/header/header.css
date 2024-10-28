@@ -104,8 +104,11 @@ header {
   }
 
   .logo-right {
-    color: var(--cor-branca);
     display: none;
+  }
+
+  .logo-right img {
+    width: 150px;
   }
 
 @media screen and (max-width: 860px){
