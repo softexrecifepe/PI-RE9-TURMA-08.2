@@ -9,16 +9,16 @@ const Banner: React.FC = () => {
       <div className="marketing-content">
         <div className="logo-title-container">
           <img src={logo} alt="Logo" className="agency-logo" />
-          <h1 className="agency-title">re9ção</h1>
+          <h1 className="agency-title">Re9ção</h1>
         </div>
         <div className="agency-subtitle-stack">
-          <span className="highlighted-text">soluções</span>
-          <span>integradas</span>
+          <span className="highlighted-text">Soluções</span>
+          <span>Integradas</span>
         </div>
         <p className="agency-subtitle">
         “Unir-se é um bom começo, manter a união é um progresso, <br /> e trabalhar em conjunto é a vitória.” (Henry Ford)
         </p>
-        <button className="learn-more-btn">saiba +</button>
+        <button className="learn-more-btn">Saiba +</button>
         <div className="contact-info">
       <div className="contact-item">
         <FaPhone className="contact-icon" /> (81) 99999-7890
