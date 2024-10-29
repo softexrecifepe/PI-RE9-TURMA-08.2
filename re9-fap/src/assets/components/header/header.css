@@ -1,20 +1,27 @@
 header {
-    width: 100vw;  
-    margin-bottom: 24px;
+  width: 100%;
+  position: fixed; /* Fixa a navbar no topo da página */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que a navbar fique sobre todo o conteúdo */
 }
   
 .nav-bar {
-    height: 12vh;
+  height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--cor-laranja);
-    
+    background: rgba(255, 255, 255, 0.1); /* Transparência do fundo */
+    backdrop-filter: blur(10px) saturate(180%); /* Efeito de vidro */
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para o efeito de profundidade */
+    padding: 0 24px;
 }
   
   .left-header {
     width: 40vw;
-    padding: 0 12px;
+    padding: 0
   }
 
   .menu-header {
@@ -30,6 +37,7 @@ header {
     width: 40vw;
     transform: translateX(-100%);
     transition: all .3s;
+    left: 0; /* Posiciona o menu no canto esquerdo */
   }
 
   .menu-header-visible {
@@ -50,7 +58,7 @@ header {
   }
 
     .line-buguer-menu {
-      background-color: var(--cor-branca);
+      background-color: var(--cor-laranja);
       width: 100%;
       height: 2px;
       border-radius: 2px;
@@ -82,13 +90,12 @@ header {
     height: 80px;
     border-radius: 50%;
     margin-bottom: -30px;
-    background-color: var(--cor-branca);
-
+    backdrop-filter: blur(10px) saturate(180%); /* Efeito de vidro */
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
+  
   .logo img {
     width: 50px;
     object-fit: cover; 

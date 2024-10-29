@@ -4,7 +4,7 @@ const Card: React.FC = () => {
   return (
     <div>
       <header>
-        <h1>Conexões que transformam</h1>
+        {/* <h1>Conexões que transformam</h1> */}
       </header>
       <div className="container-inicial">
         <section className="grid-A-iniciais">

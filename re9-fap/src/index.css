@@ -13,6 +13,7 @@ html, body {
 
 body {
   font-family: "DM Sans";
+  overflow-x: hidden;
 }
 
 main {
@@ -21,12 +22,15 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 12vh; /* Adiciona espaço equivalente à altura da navbar */
+  padding-top: 12vh; 
 }
 
-h1 {
+
+/* h1 {
   text-align: center;
   color: var(--cor-laranja);
-}
+} */
 
 :root {
   --cor-laranja: #fc7f00;
