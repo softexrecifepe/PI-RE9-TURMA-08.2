@@ -1,42 +1,21 @@
 import './footer.css';
-import { FaInstagram, FaFacebook, FaGoogle, FaGithub, FaLinkedin} from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaGoogle, FaLinkedin} from 'react-icons/fa';
 
 function Footer () {
     return (
         <>
-            <footer>
-                <div className="footer-container">
-                    <div className="social-media">
-                        <a href="https://www.facebook.com/Re9Acao.Solucoes/" target="_blank" rel="noopener noreferrer" className="botao">
-                            <FaFacebook /> 
-                        </a>
-
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contato@re9acao.com.br&su=Assunto%20do%20Email&body=Mensagem%20inicial%20aqui." target="_blank" rel="" className="botao">
-                           <FaGoogle/>
-                        </a>
-
-                        <a href="" target="_blank" rel="noopener noreferrer" className="botao">
-                            <FaGithub />
-                        </a>
-
-                        <a
-                        href="http://instagram.com/re9acao_solucoes_integradas"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="botao"
-                    >
-                        <FaInstagram /> 
-                    </a>
-
-                        <a href="http://linkedin.com/gustavoboudoux" target="_blank" rel="noopener noreferrer" className="botao">
-                            <FaLinkedin />
-                        </a>
-                    </div>   
+            <footer className='footer'>
+                <div className='top-footer'>
+                    <ul>
+                        <li><a className='icon-rede-footer' href="https://www.instagram.com/re9.acao" target='_blank' rel='external'><FaInstagram /></a></li>
+                        <li><a className='icon-rede-footer' href="https://www.facebook.com/Re9Acao.Solucoes/" target='_blank' rel='external'><FaFacebook /></a></li>
+                        <li><a className='icon-rede-footer' href="https://mail.google.com/mail/u/0/?fs=1&to=contato@re9acao.com.br&su=Assunto+do+Email&body=Mensagem+inicial+aqui.&tf=cm" target='_blank' rel='external'><FaGoogle /></a></li>
+                        <li><a className='icon-rede-footer' href="https://www.linkedin.com/in/gustavo-boudoux" target='_blank' rel='external'><FaLinkedin /></a></li>
+                    </ul>
                 </div>
-                
-                <div className="footer-bottom">
-                        <p className="direitos-reservados">&copy; 2024; Todos os direitos reservados - <span className="empresa">Re9ação</span></p>
-                    </div>
+                <div className='bottom-footer'>
+                    <p>&copy;2024, todos os direitos reservados</p>
+                </div>
             </footer>
     
         </>  
