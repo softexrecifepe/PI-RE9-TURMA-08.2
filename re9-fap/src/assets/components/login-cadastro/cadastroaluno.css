@@ -1,0 +1,53 @@
+.cadastro-aluno-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.container-titulo-subtitulo-cadastro {
+    color: var(--cor-azul);
+    text-align: center;
+}
+
+.container-titulo-subtitulo-cadastro h1 {
+    font-size: 2em;
+}
+
+.container-inputs-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.container-duplo-inputs-cadastro {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+}
+
+.conatiner-input-icon {
+    width: 100%;
+    display: flex;
+    align-items: last baseline;
+    border-bottom: 1px solid var(--cor-azul);
+}
+
+.conatiner-input-icon svg {
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.botao-formulario-cadastro {
+    margin-top: 16px;
+    width: 100%;
+    height: 44px;
+    font-size: 1em;
+    max-width: 450px;
+}

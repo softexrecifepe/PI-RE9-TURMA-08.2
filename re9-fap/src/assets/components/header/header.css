@@ -48,6 +48,15 @@ header {
     margin-bottom: 12px;
   }
 
+  .menu-header li a{
+    text-decoration: none;
+    color: var(--cor-branca);
+  }
+
+  .menu-header li a:visited{
+    color: var(--cor-branca);
+  }
+
   .burguer-menu {
     cursor: pointer;
     width: 25px;

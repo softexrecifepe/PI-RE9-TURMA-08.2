@@ -1,0 +1,29 @@
+.aluno-instituicao-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logotipo-aluno-instituicao{
+    width: 200px;
+}
+
+.chamada-aluno-instituicao-seletor {
+    color: var(--cor-azul);
+    text-align: center;
+}
+
+.container-botoes-seletor {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: .5rem;
+}
+
+.container-botoes-seletor button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    cursor: pointer;
+}

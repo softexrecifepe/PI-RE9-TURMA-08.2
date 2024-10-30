@@ -3,6 +3,7 @@ import Button from "../buttons/Buttons";
 import { MouseEventHandler } from 'react';
 import logo from '../../img/logo-edit.png';
 import logocompleta from '../../img/logocompleta.png';
+import { Link } from 'react-router-dom';
 
 
 function Burguermenu({onClick}: {onClick:MouseEventHandler}) {
@@ -52,7 +53,7 @@ function Header() {
                     />
                     <ul className='menu-header'>
                         <li>Login</li>
-                        <li>Cadastre-se</li>
+                        <li><Link to={"/cadastro"}>Cadastre-se</Link></li>
                     </ul>
                 </div>
                 <div className="center-header">

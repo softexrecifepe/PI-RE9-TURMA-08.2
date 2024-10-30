@@ -1,0 +1,9 @@
+.main-pagcadastro {
+    height: 100vh;
+    margin: 0;
+    padding: 0px 48px 0px 48px;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
