@@ -5,28 +5,28 @@ import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const Banner: React.FC = () => {
   return (
-    <div className="marketing-agency-container">
-      <div className="marketing-content">
-        <div className="logo-title-container">
-          <img src={logo} alt="Logo" className="agency-logo" />
-          <h1 className="agency-title">Re9ção</h1>
+    <div className="banner-container">
+      <div className="banner-content">
+        <div className="logo-title-wrapper">
+          <img src={logo} alt="Logo" className="banner-logo" />
+          <h1 className="banner-title">Re9ção</h1>
         </div>
-        <div className="agency-subtitle-stack">
-          <span className="highlighted-text">Soluções</span>
-          <span>Integradas</span>
+        <div className="subtitle-section">
+          <span className="subtitle-highlight">Soluções</span>
+          <span className="subtitle-regular">Integradas</span>
         </div>
-        <p className="agency-subtitle">
-        “Unir-se é um bom começo, manter a união é um progresso, <br /> e trabalhar em conjunto é a vitória.” (Henry Ford)
+        <p className="banner-quote">
+          “Unir-se é um bom começo, manter a união é um progresso, <br /> e trabalhar em conjunto é a vitória.” (Henry Ford)
         </p>
-        <button className="learn-more-btn">Saiba +</button>
-        <div className="contact-info">
-      <div className="contact-item">
-        <FaPhone className="contact-icon" /> (81) 99999-7890
-      </div>
-      <div className="contact-item">
-        <FaEnvelope className="contact-icon" /> re9cao@gmail.com
-      </div>
-     </div> 
+        <button className="button-learn-more">Saiba +</button>
+        <div className="contact-details">
+          <div className="contact-detail-item">
+            <FaPhone className="contact-icon" /> (81) 99999-7890
+          </div>
+          <div className="contact-detail-item">
+            <FaEnvelope className="contact-icon" /> re9cao@gmail.com
+          </div>
+        </div>
       </div>
     </div>
   );
