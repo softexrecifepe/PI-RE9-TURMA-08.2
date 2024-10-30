@@ -1,7 +1,8 @@
 import './header.css';
 import Button from "../buttons/Buttons";
 import { MouseEventHandler } from 'react';
-import logo from '../../img/logo.svg';
+import logo from '../../img/logo-edit.png';
+import logocompleta from '../../img/logocompleta.png';
 
 
 function Burguermenu({onClick}: {onClick:MouseEventHandler}) {
@@ -60,7 +61,7 @@ function Header() {
                     </div>
                 </div>
                 <div className="right-header">
-                    <div className='logo-right'>LOGO</div>
+                    <div className='logo-right'><img src={logocompleta} alt="logo renove" /></div>
                     <div className="buttons-container">
                         <Button stylebutton="primary-button" text="Entrar"/>
                         <Button stylebutton="secundary-button" text="Cadastre-se"/>
