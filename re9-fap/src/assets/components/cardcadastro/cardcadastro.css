@@ -24,7 +24,8 @@
     border-radius: 20px;
   }
 
-  .buttons-container{
+  .empresa-instituicao-botao{
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
