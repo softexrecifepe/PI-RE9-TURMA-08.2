@@ -11,7 +11,7 @@ const Cardcadastro: React.FC = () => {
       <div className="layout-cadastro">
         <img src= {layoutcadastro} alt="Layout"/>
         </div>
-        <div className="buttons-container">
+        <div className="empresa-instituicao-botao">
         <h1>Empresa</h1>
         <Button stylebutton="secundary-button" text="Clique Aqui"/>
         </div>
@@ -21,7 +21,7 @@ const Cardcadastro: React.FC = () => {
         <div className="layout-cadastro">
         <img src= {layoutcadastro} alt="Layout"/>
         </div>
-        <div className="buttons-container">
+        <div className="empresa-instituicao-botao">
         <h1>Instituição</h1>
         <Button stylebutton="secundary-button" text="Clique Aqui"/>
         </div>
