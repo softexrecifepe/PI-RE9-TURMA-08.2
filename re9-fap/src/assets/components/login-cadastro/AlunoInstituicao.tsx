@@ -15,9 +15,8 @@ function AlunoInstituicao() {
                 </h2>
 
                     <div className="container-botoes-seletor">
-                        <Button stylebutton="primary-button" text="Aluno"/>
-                        <Button stylebutton="primary-button" text="Professor"/>
-                        <Button stylebutton="secundary-button" text="Instituição"/>
+                        <Button stylebutton="primary-button" text="Empresa"/>
+                        <Button stylebutton="primary-button" text="Participante"/>
                     </div>
             </section>
         </>

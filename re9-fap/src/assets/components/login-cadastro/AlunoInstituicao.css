@@ -23,6 +23,10 @@
 }
 
 .container-botoes-seletor button {
+    background-color: var(--cor-branca);
+    border: 2px solid var(--cor-azul);
+    color: var(--cor-azul);
+    border-radius: 5px;
     padding-top: 12px;
     padding-bottom: 12px;
     cursor: pointer;

@@ -5,10 +5,11 @@
     align-items: center;
 
     gap: 20px;
+    color: var(--cor-branca);
+    background-color: var(--cor-azul);
 }
 
 .container-titulo-subtitulo-cadastro {
-    color: var(--cor-azul);
     text-align: center;
 }
 
@@ -50,4 +51,8 @@
     height: 44px;
     font-size: 1em;
     max-width: 450px;
+    background-color: var(--cor-branca);
+    border: 2px solid var(--cor-azul);
+    color: var(--cor-azul);
+    border-radius: 5px;
 }

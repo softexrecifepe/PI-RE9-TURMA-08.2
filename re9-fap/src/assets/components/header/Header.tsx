@@ -4,7 +4,7 @@ import { MouseEventHandler } from 'react';
 import logo from '../../img/logo-edit.png';
 import logocompleta from '../../img/logocompleta.png';
 import { Link } from 'react-router-dom';
-
+ 
 
 function Burguermenu({onClick}: {onClick:MouseEventHandler}) {
 
