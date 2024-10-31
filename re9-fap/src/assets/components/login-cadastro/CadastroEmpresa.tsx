@@ -1,25 +1,25 @@
-import './cadastroaluno.css'
+import './cadastros.css'
 import Input from "../inputs/Input";
-import { FaRegUser, FaCheck} from "react-icons/fa";
+import { FaCheck, FaRegBuilding } from "react-icons/fa";
 import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
 
 
-function CadastroAluno() {
+function CadastroEmpresa() {
     return(
         <>
         <section className="cadastro-aluno-section">
             <div className='container-titulo-subtitulo-cadastro'>
                 <h1 className="titulo-formulario-cadastro">Cadastro</h1>
-                <h3 className="subtitulo-formulario-cadastro">Participante</h3>
+                <h3 className="subtitulo-formulario-cadastro">Empresa</h3>
             </div>
 
             <form autoComplete='email' className='container-inputs-cadastro'>
 
                 <div className='conatiner-input-icon'>
-                    <Input titulo="Nome" placeholder="Digite seu nome" type="text"/><FaRegUser/>
+                    <Input titulo="Nome da empresa" placeholder="Digite o nome da empresa" type="text"/><FaRegBuilding />
                 </div>
                 <div className='conatiner-input-icon'>
-                    <Input titulo="CPF" placeholder="Digite seu CPF" type="text"/><FaCheck/>
+                    <Input titulo="CNPJ" placeholder="Digite o CNPJ da empresa" type="text"/><FaCheck/>
                 </div>
 
                 <div className='conatiner-input-icon'>
@@ -38,4 +38,4 @@ function CadastroAluno() {
     )
 }
 
-export default CadastroAluno;
+export default CadastroEmpresa;

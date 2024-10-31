@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    background-color: var(--cor-verde);
+    border-radius: 12px;
+
+    padding: 0px 24px;
 }
 
 .logotipo-aluno-instituicao{
@@ -11,7 +15,7 @@
 }
 
 .chamada-aluno-instituicao-seletor {
-    color: var(--cor-azul);
+    color: var(--cor-branca);
     text-align: center;
 }
 
@@ -23,9 +27,9 @@
 }
 
 .container-botoes-seletor button {
-    background-color: var(--cor-branca);
-    border: 2px solid var(--cor-azul);
-    color: var(--cor-azul);
+    background-color: var(--cor-verde);
+    border: 2px solid var(--cor-branca);
+    color: var(--cor-branca);
     border-radius: 5px;
     padding-top: 12px;
     padding-bottom: 12px;

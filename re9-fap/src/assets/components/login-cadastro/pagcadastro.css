@@ -1,9 +1,32 @@
 .main-pagcadastro {
     height: 100vh;
     margin: 0;
-    padding: 0px 48px 0px 48px;
-    padding-bottom: 0;
+    padding: 48px;    
+}
+
+.section-pagcadastro {
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-}
+    border-radius: 12px;
+    box-shadow:
+    4px 4px 6px rgba(0, 0, 0, 0.100),
+    -4px -4px 6px rgba(0, 0, 0, 0.100);
+  }
+
+  .section-arvore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 800px){
+    .section-pagcadastro {
+        grid-template-columns: 1fr;
+    }
+
+    .section-arvore {
+        display: none;
+    }
+  }

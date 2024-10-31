@@ -3,10 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0px 24px;
 
     gap: 20px;
     color: var(--cor-branca);
-    background-color: var(--cor-azul);
+    background-color: var(--cor-verde);
+    border-radius: 12px;
 }
 
 .container-titulo-subtitulo-cadastro {
@@ -27,17 +29,19 @@
     max-width: 600px;
 }
 
-.container-duplo-inputs-cadastro {
-    width: 100%;
-    display: flex;
-    gap: .5rem;
+.conatiner-input-icon input {
+    background-color: var(--cor-verde);
+    color: var(--cor-branca);
 }
 
+.conatiner-input-icon input::placeholder {
+    color: var(--cor-branca);
+}
 .conatiner-input-icon {
     width: 100%;
     display: flex;
     align-items: last baseline;
-    border-bottom: 1px solid var(--cor-azul);
+    border-bottom: 1px solid var(--cor-branca);
 }
 
 .conatiner-input-icon svg {
@@ -51,8 +55,8 @@
     height: 44px;
     font-size: 1em;
     max-width: 450px;
-    background-color: var(--cor-branca);
-    border: 2px solid var(--cor-azul);
-    color: var(--cor-azul);
+    background-color: var(--cor-verde);
+    border: 2px solid var(--cor-branca);
+    color: var(--cor-branca);
     border-radius: 5px;
 }

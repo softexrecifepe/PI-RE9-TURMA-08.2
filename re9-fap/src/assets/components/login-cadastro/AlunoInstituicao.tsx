@@ -1,10 +1,10 @@
 import "./AlunoInstituicao.css"
 import logotipo from "../../img/logocompleta.png"
-import Button from "../buttons/Buttons";
 
-function AlunoInstituicao() {
 
-    const tela:string = "cadastro"
+
+function AlunoInstituicao({TipoEscolhido, tela}: {TipoEscolhido:any, tela:string}) {
+
 
     return(
         <>
@@ -15,8 +15,8 @@ function AlunoInstituicao() {
                 </h2>
 
                     <div className="container-botoes-seletor">
-                        <Button stylebutton="primary-button" text="Empresa"/>
-                        <Button stylebutton="primary-button" text="Participante"/>
+                        <button onClick={() => TipoEscolhido('empresa')} className="primary-button">Empresa</button>
+                        <button onClick={() => TipoEscolhido('participante')} className="primary-button">Participante</button>
                     </div>
             </section>
         </>
