@@ -8,7 +8,8 @@
     gap: 20px;
     color: var(--cor-branca);
     background-color: var(--cor-verde);
-    border-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .container-titulo-subtitulo-cadastro {

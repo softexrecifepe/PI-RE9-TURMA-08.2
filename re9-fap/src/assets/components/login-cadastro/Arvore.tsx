@@ -1,8 +1,11 @@
+import arvore from '../../img/test-74.png';
+
+
 function Arvore() {
     return (
         <>
         <section className='section-arvore'>
-            Aqui terá uma árvore
+            <img src={arvore} alt="árvore com a logo da renove no lugar das folhas" />
         </section>
         </>
     )

@@ -1,4 +1,5 @@
 .main-pagcadastro {
+    background-color: whitesmoke;
     height: 100vh;
     margin: 0;
     padding: 48px;    
@@ -10,20 +11,32 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     border-radius: 12px;
+    background-color: var(--cor-branca);
     box-shadow:
     4px 4px 6px rgba(0, 0, 0, 0.100),
     -4px -4px 6px rgba(0, 0, 0, 0.100);
   }
 
   .section-arvore {
+    background: url('./img/imagebackground.png') no-repeat right center;
+    background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-right: -5px;
+  }
+
+  .section-arvore img {
+    width: 350px;
   }
 
   @media screen and (max-width: 800px){
     .section-pagcadastro {
         grid-template-columns: 1fr;
+    }
+
+    .section-pagcadastro section {
+      border-radius: 12px;
     }
 
     .section-arvore {
