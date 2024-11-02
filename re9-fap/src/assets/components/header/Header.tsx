@@ -52,7 +52,7 @@ function Header() {
                     onClick={handleClickmenu}
                     />
                     <ul className='menu-header'>
-                        <li>Login</li>
+                        <li><Link to={"/login"}>Login</Link></li>
                         <li><Link to={"/cadastro"}>Cadastre-se</Link></li>
                     </ul>
                 </div>
@@ -64,8 +64,8 @@ function Header() {
                 <div className="right-header">
                     <div className='logo-right'><img src={logocompleta} alt="logo renove" /></div>
                     <div className="buttons-container">
-                        <Button stylebutton="primary-button" text="Entrar"/>
-                        <Button stylebutton="secundary-button" text="Cadastre-se"/>
+                        <button className='primary-button'><Link to={"/login"}>Login</Link></button>
+                        <button className='secundary-button'><Link to={"/cadastro"}>Cadastre-se</Link></button>
                     </div>
                 </div>
                 </nav>
