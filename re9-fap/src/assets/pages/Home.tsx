@@ -5,6 +5,8 @@ import CardComentarios from "../components/card-comentarios/Card-comentarios";
 import Footer from "../components/footer/Footer";
 import MapPernambuco from "../components/mapa/MapPernambuco";
 import Cardcadastro from "../components/cardcadastro/Cardcadastro";
+import GridComponent from "../components/GridComponent/GridComponent";
+
 
 
 function Home() {
@@ -14,7 +16,9 @@ function Home() {
             <Header/>
             <Banner/>
         <main>
+                    
             <Card/>
+            <GridComponent/>
             <Cardcadastro/>
             <CardComentarios/>
             <MapPernambuco/>
