@@ -11,7 +11,7 @@ function AlunoInstituicao({TipoEscolhido, tela}: {TipoEscolhido:any, tela:string
             <section className="aluno-instituicao-section">
                 <img className="logotipo-aluno-instituicao" src={logotipo} alt="renove logo" />
                 <h2 className="chamada-aluno-instituicao-seletor">
-                    Selecione abaixo que tipo de {tela == "cadastro"? "cadastro": "login"} deseja realizar
+                    Selecione abaixo que tipo de {tela == "cadastro"? "cadastro": "login"} que deseja realizar
                 </h2>
 
                     <div className="container-botoes-seletor">

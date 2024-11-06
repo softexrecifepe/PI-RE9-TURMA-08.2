@@ -1,9 +1,42 @@
 import './cadastros.css'
 import Input from "../inputs/Input";
 import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
+import { useEffect, useState } from 'react';
 
 
 function LoginParticipante() {
+
+    const [info, setInfo] = useState({
+        email:'',
+        senha:''
+    })
+    const [finalizado, setFinalizado] = useState(false)
+
+    const atualizarInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const {name, value} = e.target
+
+        setInfo((previnfo) => ({
+            ...previnfo,
+            [name]: value
+        }))
+    }
+
+    useEffect(() => {
+        const isComplet = Object.values(info).every((val) => val.trim() !== '')
+        setFinalizado(isComplet)
+    }, [info])
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if(!finalizado) {
+            alert("Preencha todos os campos para prosseguir")
+            return;
+        }
+
+        console.log('informações passadas: ' + info.email)
+    }
+
     return(
         <>
         <section className="cadastro-aluno-section">
@@ -12,14 +45,22 @@ function LoginParticipante() {
                 <h3 className="subtitulo-formulario-cadastro">Participante</h3>
             </div>
 
-            <form autoComplete='email' className='container-inputs-cadastro'>
+            <form autoComplete='email' onSubmit={handleSubmit} className='container-inputs-cadastro'>
 
                 <div className='conatiner-input-icon'>
-                    <Input titulo="E-mail" placeholder="Digite seu Email" type="email"/><MdMailOutline />
+                    <div>
+                        <p>E-mail</p>
+                        <input name='email' onChange={atualizarInfo} className='input-component' placeholder="digite seu email" type="email"/>
+                    </div>
+                    <MdMailOutline />
                 </div>
 
                 <div className='conatiner-input-icon'>
-                    <Input titulo="Senha" placeholder="Digite sua senha" type="password"/><MdOutlinePassword />
+                    <div>
+                        <p>Senha</p>
+                        <input name='senha' onChange={atualizarInfo} className='input-component' placeholder="digite sua senha" type="password"/>
+                    </div>
+                    <MdOutlinePassword />
                 </div>
 
                 <button className='secundary-button botao-formulario-cadastro'>Entrar</button>

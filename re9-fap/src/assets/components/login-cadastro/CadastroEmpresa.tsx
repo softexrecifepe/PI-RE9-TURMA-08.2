@@ -1,5 +1,5 @@
 import './cadastros.css'
-import { useState } from 'react';
+import { useEffect,useState } from 'react';
 import { FaCheck, FaRegBuilding } from "react-icons/fa";
 import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
 import * as React from 'react';
@@ -7,15 +7,42 @@ import * as React from 'react';
 
 function CadastroEmpresa() {
 
-    const [info, setInfo] = useState({})
+    const [info, setInfo] = useState({
+        nome:'',
+        cnpj:'',
+        email:'',
+        senha:''
+    })
+
+    const [finalizado, setFinalizado] = useState(false)
+
+    const formatarCNPJ = (cnpj:string) => {
+        return cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, '$1.$2.$3/$4-$5');
+    };
 
     const atualizarinfo = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInfo(
-            {   
-                ...info,
-                [e.target.name]: e.target.value
-            }
-        )
+        const {name, value} = e.target
+        
+        setInfo((previnfo)=>({
+            ...previnfo,
+            [name]: name === 'cnpj' ? formatarCNPJ(value.replace(/\D/g, '')) : value
+        }))
+    }
+
+    useEffect(() => {
+        const isComplet = Object.values(info).every((val) => val.trim() !== '')
+        setFinalizado(isComplet)
+    }, [info])
+
+    const handleSubmit = (e:React.FormEvent) => {
+        e.preventDefault()
+
+        if(!finalizado){
+            alert("preencha todos os campos para prosseguir")
+            return;
+        }
+
+        console.log('Informações enviadas: ' + info.cnpj)
     }
 
     return(
@@ -26,19 +53,22 @@ function CadastroEmpresa() {
                 <h3 className="subtitulo-formulario-cadastro">Empresa</h3>
             </div>
 
-            <form autoComplete='email' className='container-inputs-cadastro'>
+            <form onSubmit={handleSubmit}
+            className='container-inputs-cadastro'>
 
                 <div className='conatiner-input-icon'>
                 <div>
                     <p>Nome da empresa</p>
-                    <input name='nome' onChange={atualizarinfo} className='input-component' placeholder="Digite o nome da empresa" type="text"/>
+                    <input autoComplete='no' 
+                    name='nome' onChange={atualizarinfo} className='input-component' placeholder="Digite o nome da empresa" type="text"/>
                 </div>
                     <FaRegBuilding />
                 </div>
                 <div className='conatiner-input-icon'>
                     <div>
-                        <p>CNPJ</p>
-                        <input name='cnpj' onChange={atualizarinfo} className='input-component' placeholder="Digite o CNPJ da empresa" type="text"/>
+                        <p>CNPJ (apenas números)</p>
+                        <input autoComplete='no' pattern='[0-9]{14}' maxLength={14}
+                         name='cnpj' onChange={atualizarinfo} className='input-component' placeholder="Digite o CNPJ da empresa" type="text"/>
                     </div>
                     <FaCheck/>
                 </div>

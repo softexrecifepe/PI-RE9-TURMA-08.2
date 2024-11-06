@@ -1,5 +1,5 @@
 import './cadastros.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaRegUser, FaCheck} from "react-icons/fa";
 import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
 // import validarcpf from './validarcpf';
@@ -7,48 +7,42 @@ import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
 
 function CadastroParticipante() {
 
-    const [info, setInfo] = useState({})
+    const [info, setInfo] = useState({
+        nome: '',
+        cpf: '',
+        email: '',
+        senha: ''
+    })
+
     const [finalizado, setFinalizado] = useState(false)
 
     const formatarcpf = (cpf:string) => {
-        const cpf_formatado = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, 
-    (match, argumento1, argumento2, argumento3, argumento4) => {
-      return argumento1 + '.' + argumento2 + '.' + argumento3 + '-' + argumento4;
-    }
-  );
-
-        setInfo({
-            ...info,
-            cpf: cpf_formatado
-        })
-        
-
-        if (Object.keys(info).length === 4) {
-            setFinalizado(true)
-        }
-        
+        return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
     }
 
     const atualizarinfo = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInfo(
-            {   
-                ...info,
-                [e.target.name]: e.target.value
-            }
-        )
+        const { name, value } = e.target
 
-    if (Object.keys(info).length === 4) {
-        setFinalizado(true)
+        setInfo((prevInfo)=>({
+            ...prevInfo,
+            [name]: name === 'cpf' ? formatarcpf(value.replace(/\D/g, '')) : value
+        }))
     }
-    }
+
+    useEffect(()=>{
+        const isComplet = Object.values(info).every((val) => val.trim() !== '')
+        setFinalizado(isComplet);
+    }, [info])
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        const inputCPF = document.getElementById("cpf") as HTMLInputElement
-        const cpf = inputCPF.value
-        formatarcpf(cpf)
-        console.log(info)
+        if(!finalizado) {
+            alert('Preencha o todos os campos para prosseguir')
+            return;
+        }
+
+        console.log('informações passadas:' + info.cpf)
     }
 
 
@@ -60,23 +54,22 @@ function CadastroParticipante() {
                 <h3 className="subtitulo-formulario-cadastro">Participante</h3>
             </div>
 
-            <form autoComplete='email' method='get' onSubmit={handleSubmit} className='container-inputs-cadastro'>
+            <form onSubmit={handleSubmit} className='container-inputs-cadastro'>
 
                 <div className='conatiner-input-icon'>
                 <div>
                     <p>Nome</p>
-                    <input name='nome' onChange={atualizarinfo} className='input-component' placeholder="Digite seu nome" type="text"/>
+                    <input name='nome' autoComplete='no' onChange={atualizarinfo} className='input-component' placeholder="Digite seu nome" type="text"/>
                 </div>
                     <FaRegUser/>
                 </div>
                 <div className='conatiner-input-icon'>
                     <div>
                         <p>CPF (apenas números)</p>
-                        <input maxLength={11} name='cpf' id='cpf' onChange={atualizarinfo} className='input-component' placeholder="Digite seu cpf" type="text" pattern='[0-9]{11}'/>
+                        <input maxLength={11} autoComplete='no' name='cpf' id='cpf' onChange={atualizarinfo} className='input-component' placeholder="Digite seu cpf" type="text" pattern='[0-9]{11}'/>
                     </div>
                     <FaCheck/>
                 </div>
-                <p id='cpf-invalido' style={{display: 'none'}}>CPF inválido</p>
                 <div className='conatiner-input-icon'> 
                     <div>
                         <p>E-mail</p>
@@ -91,14 +84,9 @@ function CadastroParticipante() {
                         <input name='senha' onChange={atualizarinfo} className='input-component' placeholder="Digite sua senha" type="password"/>
                     </div>
                     <MdOutlinePassword />
-                </div>
+                </div>                
 
-                <p style={{display:'none'}} id='preencha-todos-os-campos'>Preencha todos os campos para prosseguir!</p>
-                
-
-                <button disabled={
-                    finalizado === false
-                } className='secundary-button botao-formulario-cadastro'>Cadastre-se</button>
+                <button className='secundary-button botao-formulario-cadastro'>Cadastre-se</button>
             </form>
 
         </section>

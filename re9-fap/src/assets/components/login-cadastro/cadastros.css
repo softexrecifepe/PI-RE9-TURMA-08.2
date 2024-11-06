@@ -37,6 +37,7 @@
 
 .conatiner-input-icon input::placeholder {
     color: var(--cor-branca);
+    opacity: 80%;
 }
 .conatiner-input-icon {
     width: 100%;
