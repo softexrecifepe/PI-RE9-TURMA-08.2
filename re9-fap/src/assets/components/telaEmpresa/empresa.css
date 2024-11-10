@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container-principal {
+    /* background-color: blueviolet; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.card-lateral {
+    /* background-color: antiquewhite; */
+    padding: 70px 20px 70px 20px;
+    width: 25%;
+    max-height: 600px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid  #073763;
+}
+
+.perfil-imagem {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    border: 5px solid #073763; /* Largura de 2px, estilo sólido e cor */
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+  }
+
+.informacoes {
+    text-align: left;
+  }
+
+.empresa-nome {
+    padding-top: 20px;
+}
+
+.botao-editar {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.empresa-social {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 10px;   
+}
+
+.empresa-social img {
+    max-width: 16px;
+    max-height: 16px;
+}
+
+.social {
+    display: flex;  
+}
+
+.social span {
+    padding-left: 15px;
+}
+
+
+/*CONTEÚDO PRINCIPAL*/
+.conteudo-principal {
+    /* background-color: blue; */
+    width: 75%;
+    max-height: 600px;
+    max-width: 100%;
+    margin: 10px;   
+    border-radius: 10px;
+    border: 1px solid  #073763;
+    
+    padding: 20px 50px 20px 30px;
+}
+
+.empresa-paragrafo {
+    align-items: center;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #073763;
+}
+
+
+/* CARROSSEL */
+.container-carrossel {
+    width: 100%;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;  
+    
+    padding-top: 10px;
+
+    align-items: center;
+}
+
+.botoes {
+    position:absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.botao {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container-carrossel2 {
+    width: 100%;
+    max-width: 800px; /* largura máxima do carrossel */
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+
+    margin-top: 10px;   
+}
+
+.carrossel-projetos-item {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.projetos-item {
+    min-width: 20%; /* Cada item ocupa 20% da largura do carrossel */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.projetos-item img {
+    max-width: 100%; /* Ajusta a imagem para não ultrapassar o limite do item */
+    border-radius: 5px;
+}
+
+.projetos-item button {
+    margin-top: 20px;
+}
+
+.inscrever-projeto {
+    padding-top: 50px;
+}
