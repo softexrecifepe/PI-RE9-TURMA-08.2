@@ -1,5 +1,4 @@
 import './cadastros.css'
-import Input from "../inputs/Input";
 import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
 import { useEffect, useState } from 'react';
 

@@ -1,5 +1,5 @@
 import './header.css';
-import Button from "../buttons/Buttons";
+import '../buttons/buttons.css'
 import { MouseEventHandler } from 'react';
 import logo from '../../img/logo-edit.png';
 import logocompleta from '../../img/logocompleta.png';

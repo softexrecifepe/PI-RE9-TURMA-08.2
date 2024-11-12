@@ -55,7 +55,7 @@
     margin-right: 12px;
 }
 
-.botao-formulario-cadastro {
+button.botao-formulario-cadastro {
     cursor: pointer;
     margin-top: 16px;
     width: 100%;
