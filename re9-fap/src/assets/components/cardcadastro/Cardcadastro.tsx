@@ -1,4 +1,5 @@
 import './cardcadastro.css';
+import { Link } from 'react-router-dom';
 import layoutcadastro from '../../img/layout-cadastro.svg';
 import Button from "../buttons/Buttons";
 
@@ -13,7 +14,7 @@ const Cardcadastro: React.FC = () => {
         </div>
         <div className="empresa-instituicao-botao">
         <h1>Empresa</h1>
-        <Button stylebutton="secundary-button" text="Clique Aqui"/>
+        <button className='secundary-button'><Link to={"/cadastro"}>Clique aqui</Link></button>
         </div>
       </div>
 
@@ -23,7 +24,7 @@ const Cardcadastro: React.FC = () => {
         </div>
         <div className="empresa-instituicao-botao">
         <h1>Instituição</h1>
-        <Button stylebutton="secundary-button" text="Clique Aqui"/>
+        <button className='secundary-button'><Link to={"/cadastro"}>Cadastre-se</Link></button>
         </div>
       </div>  
         

@@ -3,7 +3,8 @@ import Button from "../buttons/Buttons";
 import { MouseEventHandler } from 'react';
 import logo from '../../img/logo-edit.png';
 import logocompleta from '../../img/logocompleta.png';
-
+import { Link } from 'react-router-dom';
+ 
 
 function Burguermenu({onClick}: {onClick:MouseEventHandler}) {
 
@@ -51,8 +52,8 @@ function Header() {
                     onClick={handleClickmenu}
                     />
                     <ul className='menu-header'>
-                        <li>Login</li>
-                        <li>Cadastre-se</li>
+                        <li><Link to={"/login"}>Login</Link></li>
+                        <li><Link to={"/cadastro"}>Cadastre-se</Link></li>
                     </ul>
                 </div>
                 <div className="center-header">
@@ -63,8 +64,8 @@ function Header() {
                 <div className="right-header">
                     <div className='logo-right'><img src={logocompleta} alt="logo renove" /></div>
                     <div className="buttons-container">
-                        <Button stylebutton="primary-button" text="Entrar"/>
-                        <Button stylebutton="secundary-button" text="Cadastre-se"/>
+                        <button className='primary-button'><Link to={"/login"}>Login</Link></button>
+                        <button className='secundary-button'><Link to={"/cadastro"}>Cadastre-se</Link></button>
                     </div>
                 </div>
                 </nav>
