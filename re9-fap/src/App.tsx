@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './assets/pages/Home'
 import PagCadastro from './assets/pages/PagCadastro'
 import PagLogin from './assets/pages/PagLogin'
+import PagCadProjetos from './assets/pages/PagCadProjetos'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/cadastro' element={<PagCadastro/>}/>
           <Route path='/login' element={<PagLogin/>}/>
+          <Route path='/cadprojeto' element={<PagCadProjetos/>}/>
         </Routes>
       </Router>
     </>
