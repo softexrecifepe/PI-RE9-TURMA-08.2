@@ -1,68 +1,92 @@
 .container-inicial {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define duas colunas iguais */
+    gap: 70px; /* Espaçamento exato de 20px entre os cards */
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.grid-A-iniciais{
-    width: 100%;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    padding-right: 4rem;
-    flex-wrap: wrap;
-}    
-.grid-B-iniciais{
-    width: 100%;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    padding-left: 4rem;
-    flex-wrap: wrap;
-}
-
-/* Estilos para os cards */
-.card-iniciais {
+    max-width: 700px; /* Limita a largura do container para aproximar os cards */
+    margin: 0 auto; /* Centraliza o container na tela */
+  }
+  
+  .card-iniciais {
     background-color: var(--cor-branca);
-    border: 1px solid var(--cor-laranja);
-    border-radius: 30px;
     padding: 24px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 339px;
-
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+    height: 250px;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-    transition: all .2s;
-}
+    gap: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para zoom e sombra */
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 
-.card-iniciais:hover {
-    transform: scale(1.05);
-}
+  .card-iniciais:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+  }
+  
+  /* Ajuste para o alinhamento horizontal */
+  .card-iniciais:nth-child(1) {
+    background-color: #66d966;
+    transform: translateX(-220px); /* Desloca levemente para a esquerda */
+  }
+  .card-iniciais:nth-child(2) {
+    background-color: #d9d9d9;
+    transform: translateX(-220px);
+  }
+  .card-iniciais:nth-child(3) {
+    background-color: #66d966;
+    transform: translateX(220px); /* Desloca levemente para a direita */
+  }
+  .card-iniciais:nth-child(4) {
+    background-color: #d9d9d9;
+    transform: translateX(220px);
+  }
 
-.card-iniciais h2 {
-    text-align: center;
-}
-
-.card-iniciais p {
-    text-align: center;
-}
-
-@media screen and (max-width: 815px) {
-    .grid-A-iniciais {
-        padding-right: 0;
-    }
-
-    .grid-B-iniciais {
-        padding-left: 0;
-    }
-
-    .card-iniciais {
+  @media screen and (max-width: 1082px) {
+    .container-inicial {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Define duas colunas iguais */
+        gap: 20px; /* Espaçamento entre os cards */
         width: 100%;
+        max-width: 700px; /* Limita a largura do container */
+        margin: 0 auto; /* Centraliza o container */
+      }
+      .card-iniciais {
+        background-color: var(--cor-branca);
+        padding: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
     }
-}
+
+    @media screen and (max-width: 1230px) {
+
+        .container-inicial {
+            
+            gap: 10px; /* Espaçamento entre os cards */
+            
+        
+          }
+
+    }
+  @media screen and (max-width: 815px) {
+    .container-inicial {
+      grid-template-columns: 1fr; /* Empilha os cards em uma única coluna */
+      gap: 10px;
+      padding: 0 20px;
+      max-width: 100%;
+    }
+  
+    .card-iniciais {
+      width: 100%;
+      transform: translateX(0); /* Remove deslocamento lateral em telas menores */
+      height: auto;
+    }
+  }
