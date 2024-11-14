@@ -18,9 +18,9 @@
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    
+    gap: 20px;
     padding: 20px 20px 10px 20px;
-    width: 25%;
+    width: 250px;
     max-height: 600px;
     margin: 10px;
     border-radius: 10px;
@@ -28,64 +28,85 @@
 } 
 
 .perfil-imagem {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: auto;
-    border: 5px solid #073763; /* Largura de 2px, estilo sólido e cor */
+    width: 100%;   
 }
 
 .imagem {
-    width: 100%;
-    height: 100%;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* margin: auto; */
+    border: 3px solid #073763; /* Largura de 2px, estilo sólido e cor */
+    margin-left: 45px;
+}
 
-  }
-
-  .informacoes {
+.informacoes {
     text-align: left;
-  }
+}
 
 .usuario-nome {
     padding-top: 20px;
+    padding-left: 10px;
 }
 
-  .botao-editar {
-    text-align: center;
-    margin-top: 50px;    
+.usuario-user {
+    padding-left: 10px;
 }
 
-.botao-editar button {
-    border: 1px solid #073763;
-}
 .usuario-social {
-    display: flex;
-    flex-direction: column;
-    
     padding-bottom: 15px;
     border-bottom: 1px solid #6b727a;
 }
 
-.usuario-social img {
-    max-width: 16px;
-    max-height: 16px;
-}
-
-.social {
-    display: flex;  
+.usuario-social li {
+    list-style-type: none;
+    padding-top: 10px;
+    height: 25px;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .social span {
-    padding-left: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 20px;
+    padding: 0 16px 0 12px;
+    line-height: 1;
+}
+
+.botao-editar {
+    text-align: center;
+    padding: 5px 15px;
+    color: #073763;
+    font-size: 0.80rem;   
+    border-radius: 10px;
+    background: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.botao-editar:hover{
+    background: #073763;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.usuario-selo {    
+    display: flex;
+    gap: 15px;
+    padding: 0px 10px 10px 15px;
 }
 
 .selos {
-    margin-top: 10px;
-    padding-bottom: 20px; 
+    transition: transform 0.4s;
 }
 
-.selos img {
-   padding: 0px 0px 0px 8px;
+.selos:hover {
+    transform: scale(1.4);
 }
 
 /*CONTEÚDO PRINCIPAL*/
@@ -106,9 +127,6 @@
 
 .usuario-paragrafo {
     align-items: center;
-
-
-
     padding-bottom: 15px;
     border-bottom: 1px solid #6b727a;
 }
@@ -119,9 +137,7 @@
     max-height: 600px;
     display: flex;
     flex-direction: column;  
-    
     padding-top: 10px;
-
     align-items: center;
 }
 
@@ -142,12 +158,19 @@
 }
 
 .item {
+    padding: 5px 15px;
     min-width: 20%; /* 100% dividido por 5 itens */
     box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
     border-right: 1px; /* separação entre os itens */
     cursor: pointer; 
+    
+    font-size: 0.80rem;
+    color: #073763;
+    border-radius: 10px;
+    background: #fff;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
 }
 
 .item a {
@@ -185,7 +208,7 @@
     max-width: 800px; /* largura máxima do carrossel */
     overflow: hidden;
     position: relative;
-    border: 2px solid #ccc;
+    
     border-radius: 10px;
     background-color: #fff;
 
@@ -195,18 +218,45 @@
 .carrossel-projetos-item {
     display: flex;
     transition: transform 0.5s ease;
+    gap: 10px;
 }
 
 .projetos-item {
-    min-width: 20%; /* Cada item ocupa 20% da largura do carrossel */
+    min-width: 18%; /* Cada item ocupa 20% da largura do carrossel */
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
+
+    border-radius: 15px;
+    background-color: #eceaea;
 }
 
 .projetos-item img {
     max-width: 100%; /* Ajusta a imagem para não ultrapassar o limite do item */
     border-radius: 5px;
+}
+
+.conteudo {
+    padding-top: 10px;
+}
+
+.conteudo button {
+    margin-top: 10px;
+    font-size: 0.80rem;
+    padding: 5px 15px;
+    color: #073763;
+    border-radius: 10px;
+    background: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.conteudo button:hover {
+    background: #073763;
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 

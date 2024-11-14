@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './usuario.css'
 
 import perfilImagem from './image/usuario/OIP.jpg';
@@ -25,49 +25,49 @@ const Usuario: React.FC = () => {
             <section className="card-lateral">
                 <div className="perfil-imagem">
                     <img className="imagem" src={perfilImagem} alt="foto-usuario" />
-                </div>
 
-                <div className="informacoes">
+                    <div className="informacoes">
                     <h3 className="usuario-nome">Nome do usuário</h3>
-                    <h4 className="usuario-user">user</h4>
+                    <span className="usuario-user">@user</span>
+                </div>
                 </div>
 
-                <div className="botao-editar">
-                    <button className="editar" onClick={() => {}}>Editar Perfil</button>
-                </div>
-
-                <div className="usuario-social">
-                    <div className="social">
+                <ul className="usuario-social">
+                    <li className="social">
                         <img src={buildingIcon} alt="Ícone de empresa" />
                         <span>Função</span>
-                    </div>
+                    </li>
                    
-                    <div className="social">
+                    <li className="social">
                         <img src={emailIcon} alt="Ícone de email" />
                         <span>E-mail</span>
-                    </div>
+                    </li>
                     
-                    <div className="social">
+                    <li className="social">
                         <img src={linkIcon} alt="Ícone de link" />
                         <span>Link</span>
-                    </div>
+                    </li>
 
-                    <div className="social">
+                    <li className="social">
                         <img src={gitIcon} alt="Ícone do GitHub" />
                         <span>Github</span>
-                    </div>   
+                    </li>   
 
-                    <div className="social">
+                    <li className="social">
                         <img src={linkedinIcon} alt="Ícone do LinkedIn" />
                         <span>Linkedin</span>
-                    </div>                   
+                    </li>                   
+                </ul>
+    
+                <button className="botao-editar" onClick={() => {}}>Editar Perfil</button>
+                
+                <div className="usuario-selo">
+                    <img className="selos" src={selo1} alt="Selo 1" />
+                    <img className="selos" src={selo2} alt="Selo 2" />
+                    <img className="selos" src={selo3} alt="Selo 3" />
                 </div>
 
-                <div className="selos">
-                    <img src={selo1} alt="Selo 1" />
-                    <img src={selo2} alt="Selo 2" />
-                    <img src={selo3} alt="Selo 3" />
-                </div>
+               
             </section>
             {/* FIM PERFIL LATERAL DO USUÁRIO */}
 
@@ -87,39 +87,18 @@ const Usuario: React.FC = () => {
                     {/* CARROSSEL CATEGORIAS */}
                     <section className="carrossel-categorias-item">
                         <div className="categorias-item">
-                            <div className="item" onClick={() => mostrarProjetos('Desenvolvimento Web')}>
-                                <a href="#">Desenvolvimento Web</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Design gráfico')}>
-                                <a href="#">Design gráfico</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('UX')}>
-                                <a href="#">UX</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('UI design')}>
-                                <a href="#">UI design</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Inteligência Artificial')}>
-                                <a href="#">Inteligência Artificial</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Desenvolvimento de Software')}>
-                                <a href="#">Desenvolvimento de Software</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Dados')}>
-                                <a href="#">Dados</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Robótica')}>
-                                <a href="#">Robótica</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Computação em Nuvem')}>
-                                <a href="#">Computação em Nuvem</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Cybersegurança')}>
-                                <a href="#">Cybersegurança</a>
-                            </div>
-                            <div className="item" onClick={() => mostrarProjetos('Internet das Coisas')}>
-                                <a href="#">Internet das Coisas</a>
-                            </div>
+                            <button className="item" onClick={() => mostrarProjetos('Desenvolvimento Web')}><a href="#"></a>Desenvolvimento Web</button>
+                            <button className="item" onClick={() => mostrarProjetos('Design gráfico')}><a href="#"></a>Design gráfico</button>
+                            <button className="item" onClick={() => mostrarProjetos('UX')}><a href="#"></a>UX</button>
+                            <button className="item" onClick={() => mostrarProjetos('UI design')}><a href="#"></a>UI design</button>
+                            <button className="item" onClick={() => mostrarProjetos('Inteligência Artificial')}><a href="#"></a>Inteligência Artificial</button>
+                            <button className="item" onClick={() => mostrarProjetos('Desenvolvimento de Software')}><a href="#"></a>Desenvolvimento de Software</button>
+                            <button className="item" onClick={() => mostrarProjetos('Dados')}><a href="#"></a>Dados</button>
+                            <button className="item" onClick={() => mostrarProjetos('Robótica')}><a href="#"></a>Robótica</button>
+                            <button className="item" onClick={() => mostrarProjetos('Computação em Nuvem')}><a href="#"></a>Computação em Nuvem</button>
+                            <button className="item" onClick={() => mostrarProjetos('Cybersegurança')}><a href="#"></a>Cybersegurança</button>
+                            <button className="item" onClick={() => mostrarProjetos('Internet das Coisas')}>
+                            <a href="#"></a>Internet das Coisas</button>
                         </div>
 
                         <div className="botoes">
@@ -137,8 +116,8 @@ const Usuario: React.FC = () => {
                                 <div className="projetos-item" key={index}>
                                     <img src={projetoImage} alt={`Projeto ${index + 1}`} />
                                     <div className="conteudo">
-                                        <h3>Nome do Projeto {index + 1}</h3>
-                                        <p>Saiba Mais</p>
+                                        <span>Nome do Projeto {index + 1}</span>
+                                        <button>Saiba Mais</button>
                                     </div>
                                 </div>
                             ))}
