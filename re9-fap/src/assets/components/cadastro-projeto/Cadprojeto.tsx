@@ -1,19 +1,23 @@
 import '../login-cadastro/cadastros.css'
-import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
+import './cadprojeto.css'
+import { MdOutlineDescription, MdDriveFileRenameOutline } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import * as React from 'react';
 
 
 function Cadprojeto() {
 
+    const [agente, setAgente] = useState([])
+
     const [info, setInfo] = useState({
-        email:'',
-        senha:''
+        email: '',
+        senha: ''
     })
     const [finalizado, setFinalizado] = useState(false)
 
     const atualizarInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = e.target
+        const { name, value } = e.target
 
         setInfo((previnfo) => ({
             ...previnfo,
@@ -26,10 +30,14 @@ function Cadprojeto() {
         setFinalizado(isComplet)
     }, [info])
 
+    const handleChange = () => {
+        
+    }
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if(!finalizado) {
+        if (!finalizado) {
             alert("Preencha todos os campos para prosseguir")
             return;
         }
@@ -37,36 +45,51 @@ function Cadprojeto() {
         console.log('informações passadas: ' + info.email)
     }
 
-    return(
+    return (
         <>
-        <section className="cadastro-aluno-section">
-            <div className='container-titulo-subtitulo-cadastro'>
-                <h1 className="titulo-formulario-cadastro">Novo Projeto</h1>
-            </div>
-
-            <form autoComplete='email' onSubmit={handleSubmit} className='container-inputs-cadastro'>
-
-                <div className='conatiner-input-icon'>
-                    <div>
-                        <p>Nome do projeto</p>
-                        <input name='nome' autoComplete='no' onChange={atualizarInfo} className='input-component' placeholder="digite o nome do projeto" type="text"/>
-                    </div>
-                    <MdMailOutline />
+            <section className="cadastro-aluno-section">
+                <div className='container-titulo-subtitulo-cadastro'>
+                    <h1 className="titulo-formulario-cadastro">Novo Projeto</h1>
                 </div>
 
-                <div className='conatiner-input-icon'>
-                    <div>
-                        <p>Descrição do projeto</p>
-                        <input name='descricao' onChange={atualizarInfo} className='input-component' placeholder="digite a descrição" type="text"/>
+                <form autoComplete='email' onSubmit={handleSubmit} className='container-inputs-cadastro'>
+
+                    <div className='conatiner-input-icon'>
+                        <div>
+                            <p>Nome do projeto</p>
+                            <input name='nome' autoComplete='no' onChange={atualizarInfo} className='input-component' placeholder="digite o nome do projeto" type="text" />
+                        </div>
+                        <MdDriveFileRenameOutline />
                     </div>
-                    <MdOutlinePassword />
-                </div>
 
+                    <div className='conatiner-input-icon'>
+                        <div>
+                            <p>Descrição do projeto</p>
+                            <input name='descricao' onChange={atualizarInfo} className='input-component' placeholder="digite a descrição" type="text" />
+                        </div>
+                        <MdOutlineDescription />
+                    </div>
 
-                <button className='secundary-button botao-formulario-cadastro'>Entrar</button>
-            </form>
+                    <div className='conatiner-input-icon'>
+                        <div>
+                            <p>Quem pode participar?</p>
+                            <div className='container-agentespermitidos'>
+                                <ul>
+                                    <li>
+                                        <input value={agente} onChange={} type="checkbox" name="mentor" id="mentor" />
+                                        <label htmlFor="mentor">Mentor</label>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <MdOutlineDescription />
+                    </div>
 
-        </section>
+                    <button className='secundary-button botao-formulario-cadastro'>Criar</button>
+                </form>
+
+            </section>
         </>
     )
 }

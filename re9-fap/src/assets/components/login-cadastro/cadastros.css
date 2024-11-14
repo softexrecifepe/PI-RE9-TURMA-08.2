@@ -6,7 +6,7 @@
     padding: 0px 24px;
 
     gap: 20px;
-    color: var(--cor-branca);
+    color: var(--cor-azul);
     background-color: var(--cor-verde);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -32,18 +32,18 @@
 
 .conatiner-input-icon input {
     background-color: var(--cor-verde);
-    color: var(--cor-branca);
+    color: var(--cor-azul);
 }
 
 .conatiner-input-icon input::placeholder {
-    color: var(--cor-branca);
+    color: var(--cor-azul);
     opacity: 80%;
 }
 .conatiner-input-icon {
     width: 100%;
     display: flex;
     align-items: last baseline;
-    border-bottom: 1px solid var(--cor-branca);
+    border-bottom: 1px solid var(--cor-azul);
 }
 
 .conatiner-input-icon div {
@@ -63,8 +63,8 @@ button.botao-formulario-cadastro {
     font-size: 1em;
     max-width: 450px;
     background-color: var(--cor-verde);
-    border: 2px solid var(--cor-branca);
-    color: var(--cor-branca);
+    border: 2px solid var(--cor-azul);
+    color: var(--cor-azul);
     border-radius: 5px;
 }
 
