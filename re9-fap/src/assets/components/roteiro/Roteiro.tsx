@@ -1,54 +1,87 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import './Roteiro.css'; // Import CSS
+import './Roteiro.css';
+
+const cardData = [
+  { 
+    number: 1, 
+    title: "Faça seu cadastro", 
+    text: "Preencha o formulário com suas informações pessoais e escolha sua área de interesse." 
+  },
+  { 
+    number: 2, 
+    title: "Escolha um projeto e aguarde o retorno", 
+    text: "Analise as opções disponíveis, selecione seu projeto e aguarde a aprovação." 
+  },
+  { 
+    number: 3, 
+    title: "Parabéns!", 
+    text: "Agora é só dar o seu melhor e aproveitar esta grande oportunidade!" 
+  },
+];
 
 const Roteiro: React.FC = () => {
-  const [visibleCards, setVisibleCards] = useState([false, false, false, false]);
-  const cardRefs = useRef([]); // Array of refs for each card
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([]);
+  const cardRefs = useRef<HTMLDivElement[]>([]);
 
-  // Improved intersection observer implementation
-  const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-    // ... rest of your function code
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
+      const cardIndex = cardRefs.current.indexOf(entry.target as HTMLDivElement);
+
       if (entry.isIntersecting) {
-        const cardIndex = cardRefs.current.indexOf(entry.target); // Efficient index lookup
         setVisibleCards((prev) => {
           const updated = [...prev];
           updated[cardIndex] = true;
           return updated;
         });
-        observer.unobserve(entry.target); // Unobserve after visibility change
+      } else {
+        setVisibleCards((prev) => {
+          const updated = [...prev];
+          updated[cardIndex] = false;
+          return updated;
+        });
       }
     });
   };
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      root: null, // Observe within viewport
-      threshold: 0.5, // Trigger animation when 50% or more is visible
+      root: null,
+      threshold: 0.5,
     });
 
-    cardRefs.current.forEach((card) => observer.observe(card)); // Observe cards
+    cardRefs.current.forEach((card) => observer.observe(card));
 
     return () => {
-      observer.disconnect(); // Disconnect on cleanup
+      observer.disconnect();
     };
-  }, [cardRefs]);
+  }, []);
 
   return (
     <div className="container">
+      <h1>Seu Caminho para o Sucesso</h1>
       <div className="cards">
-        {visibleCards.map((isVisible, index) => (
+        {cardData.map(({ number, title, text }, index) => (
           <motion.div
             className="card"
-            ref={(el) => (cardRefs.current[index] = el)} // Store refs
-            key={index}
+            ref={(el) => {
+              if (el) cardRefs.current[index] = el;
+            }}
+            key={number}
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.6 }}
+            animate={{
+              opacity: visibleCards[index] ? 1 : 0,
+              y: visibleCards[index] ? 0 : 50,
+            }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
           >
-            <h2>Card {index + 1}</h2>
-            <p>Conteúdo do Card {index + 1}</p>
+            <div className="card-content">
+              <div className="card-number">{number}</div>
+              <div className="card-texts">
+                <h2>{title}</h2>
+                <p>{text}</p>
+              </div>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -57,3 +90,4 @@ const Roteiro: React.FC = () => {
 };
 
 export default Roteiro;
+
