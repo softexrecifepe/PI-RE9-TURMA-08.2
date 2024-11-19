@@ -1,3 +1,7 @@
 .container-agentespermitidos ul{
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
 }

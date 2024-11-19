@@ -18,7 +18,7 @@
   }
 
   .section-arvore {
-    background: url('./img/imagebackground.png') no-repeat right center;
+    background: url('./img/onda-fundo.png') no-repeat right center;
     background-size: cover;
     display: flex;
     justify-content: flex-start;
