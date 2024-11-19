@@ -1,7 +1,7 @@
 import './cadastros.css'
 import { useEffect, useState } from 'react';
 import { FaCheck, FaRegBuilding } from "react-icons/fa";
-import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
+import { MdLocationOn, MdMailOutline, MdOutlinePassword } from "react-icons/md";
 import * as React from 'react';
 
 function CadastroEmpresa() {
@@ -28,15 +28,16 @@ function CadastroEmpresa() {
         }))
     }
 
-    useEffect(() => {
-        const isComplet = Object.values(info).every((val) => val.trim() !== '')
-        setFinalizado(isComplet)
-    }, [info])
+    // useEffect(() => {
+    //     const isComplet = Object.values(info).every((val) => val.trim() !== '')
+    //     setFinalizado(isComplet)
+    // }, [info])
+    const isComplet = Object.values(info).every((val) => val.trim() !== '')
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
 
-        if (!finalizado) {
+        if (!isComplet) {
             alert("preencha todos os campos para prosseguir")
             return;
         }
@@ -62,6 +63,14 @@ function CadastroEmpresa() {
                                 name='nome' onChange={atualizarinfo} className='input-component' placeholder="Digite o nome da empresa" type="text" />
                         </div>
                         <FaRegBuilding />
+                    </div>
+                    <div className='conatiner-input-icon'>
+                        <div>
+                            <p>CEP</p>
+                            <input autoComplete='no'
+                                name='cep' onChange={atualizarinfo} className='input-component' placeholder="Digite o cep da empresa" type="text" />
+                        </div>
+                        <MdLocationOn />
                     </div>
                     <div className='conatiner-input-icon'>
                         <div>

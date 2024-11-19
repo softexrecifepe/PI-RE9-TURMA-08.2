@@ -16,7 +16,7 @@
 }
 
 .chamada-aluno-instituicao-seletor {
-    color: var(--cor-branca);
+    color: var(--cor-azul);
     text-align: center;
 }
 
@@ -29,8 +29,8 @@
 
 .container-botoes-seletor button {
     background-color: var(--cor-verde);
-    border: 2px solid var(--cor-branca);
-    color: var(--cor-branca);
+    border: 2px solid var(--cor-azul);
+    color: var(--cor-azul);
     border-radius: 5px;
     padding-top: 12px;
     padding-bottom: 12px;
