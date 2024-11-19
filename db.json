@@ -1,0 +1,68 @@
+{
+    "empresas": [
+        {
+            "nome": "TechNova Ltda",
+            "cnpj": "56789012345",
+            "endereco": {
+                "rua": "Avenida Inovação",
+                "numero": "123",
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "pais": "Brasil",
+                "latitude": -23.550520,
+                "longitude": -46.633308
+            },
+            "email": "contato@technova.com",
+            "senha": "senha123",
+            "id": "7aa0"
+        },
+        {
+            "nome": "Softex",
+            "cnpj": "12341234124",
+            "endereco": {
+                "rua": "Rua dos Bobos",
+                "numero": "0",
+                "cidade": "Curitiba",
+                "estado": "PR",
+                "pais": "Brasil",
+                "latitude": -25.428954,
+                "longitude": -49.267137
+            },
+            "email": "softex@gmail.com",
+            "senha": "1234",
+            "id": "da09"
+        },
+        {
+            "nome": "AlphaCode Solutions",
+            "cnpj": "67890123456",
+            "endereco": {
+                "rua": "Rua da Programação",
+                "numero": "456",
+                "cidade": "Florianópolis",
+                "estado": "SC",
+                "pais": "Brasil",
+                "latitude": -27.595377,
+                "longitude": -48.548050
+            },
+            "email": "contato@alphacode.com",
+            "senha": "senhaalpha",
+            "id": "bc12"
+        }
+    ],
+    "pariticpantes": [
+        {
+            "nome": "João Silva",
+            "idade": 25,
+            "cidade": "Rio de Janeiro",
+            "estado": "RJ",
+            "pais": "Brasil"
+        },
+        {
+            "nome": "Ana Pereira",
+            "idade": 30,
+            "cidade": "São Paulo",
+            "estado": "SP",
+            "pais": "Brasil"
+        }
+    ]
+}
