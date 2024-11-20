@@ -84,3 +84,20 @@ button.botao-formulario-cadastro {
 .conatiner-input-titulo{
     width: 100%;
 }
+
+.double-inputs-line {
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+}
+
+.double-inputs-line select{
+    color: var(--cor-azul);
+    background-color: var(--cor-verde);
+}
+
+@media screen and (max-width: 800px) {
+    .double-inputs-line {
+        flex-wrap: wrap;
+    }
+}
