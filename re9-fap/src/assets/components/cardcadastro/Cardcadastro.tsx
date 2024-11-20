@@ -34,5 +34,7 @@ const Cardcadastro: React.FC = () => {
   );
 };
 
+
+
 export default Cardcadastro;
 
