@@ -1,5 +1,5 @@
 import './cardcadastro.css';
-import layoutcadastro from '../../img/layout-cadastro.svg';
+import layoutcadastro from '../../img/layout-cadastroo.svg';
 import Button from "../buttons/Buttons";
 
 const Cardcadastro: React.FC = () => {

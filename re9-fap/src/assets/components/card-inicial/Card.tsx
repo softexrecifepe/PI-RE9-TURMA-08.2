@@ -1,26 +1,52 @@
-import './card.css';
+import React, { useEffect } from "react";
+import "./card.css";
 
 const Card: React.FC = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          } else {
+            entry.target.classList.remove("animate");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const cards = document.querySelectorAll(".card-iniciais");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="container-inicial">
-      <article className="card-iniciais"> 
-        <h2>Vantagens da parceria</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
-      </article>
-      <article className="card-iniciais"> 
-        <h2>Dados das parcerias</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
-      </article>
-      <article className="card-iniciais"> 
-        <h2>Empresas destaque</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
-      </article>
-      <article className="card-iniciais"> 
-        <h2>Instituições destaque</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
-      </article>
+    <div className="cards-section">
+      <h1>Conexões que transformam</h1>
+      <div className="container-inicial">
+        <article className="card-iniciais">
+          <h2>Vantagens da parceria</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+        </article>
+        <article className="card-iniciais">
+          <h2>Dados das parcerias</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+        </article>
+        <article className="card-iniciais">
+          <h2>Empresas destaque</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+        </article>
+        <article className="card-iniciais">
+          <h2>Instituições destaque</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+        </article>
+      </div>
     </div>
   );
 };
 
 export default Card;
+
+
