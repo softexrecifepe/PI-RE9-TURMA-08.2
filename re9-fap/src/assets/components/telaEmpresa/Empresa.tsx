@@ -76,7 +76,7 @@ const Empresa: React.Fc = () => {
                 <ul className="empresa-social">
                     <li className="social">
                         <img src={buildingIcon} alt="incone de empresa" />
-                        <span>Atuação da empresa</span>
+                        <span>Atuação</span>
                     </li>
 
                     <li className="social">
@@ -100,7 +100,6 @@ const Empresa: React.Fc = () => {
                     </li>
                 </ul>
 
-                <button className="botao-editar" onClick={() => {}}>Editar Perfil</button>
             </section>
             {/* FIM PERFIL LATERAL DA EMPRESA */}
 

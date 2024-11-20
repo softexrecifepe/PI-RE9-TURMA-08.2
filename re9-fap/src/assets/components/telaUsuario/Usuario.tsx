@@ -99,8 +99,6 @@ const Usuario: React.FC = () => {
                     </li>
                 </ul>
 
-                <button className="botao-editar" onClick={() => {}}>Editar Perfil</button>
-
                 <div className="usuario-selo">
                     <img className="selos" src={selo1} alt="Selo 1" />
                     <img className="selos" src={selo2} alt="Selo 2" />

@@ -1,10 +1,8 @@
 .main-container-principal {
     display: flex;
     justify-content: space-between;
-
     min-height: 100vh;
     min-width: 100vw;
-   
 }
 
 /* PERFIL LATERAL */
@@ -105,7 +103,6 @@
 
 /*CONTEÚDO PRINCIPAL*/
 .conteudo-principal {
-    /* background-color: blue; */
     width: 75%;
     
     max-width: 100%;
@@ -253,5 +250,190 @@
     color: #fff;
 }
 
+/* RESPOSSIVIDADE  */
+@media (max-width: 480px) {
+    /* Ajuste no container principal */
+    .main-container-principal {
+        flex-direction: column; 
+        min-height: auto; /* Remove a altura mínima */
+        padding: 10px; 
+        justify-content: flex-start;
+        max-width: 460px; 
+        width: 100%; /* Garante que ocupe toda a largura disponível até o limite de 460px */
+        margin: 0 auto; /* Centraliza o container horizontalmente */
+    }
+    
 
+    /* Ajuste no perfil lateral */
+    .card-lateral {
+        width: 100%; 
+        padding: 10px; 
+        margin: 10px 0; 
+        max-height: none; /* Remove limite de altura */
+    }
 
+    /* Ajuste na imagem do perfil */
+    .imagem {
+        width: 70px; 
+        height: 70px;
+        border-radius: 50%;
+        margin-left: 10px; 
+        margin-right: 15px; 
+        display: block; /* Faz a imagem ocupar toda a largura disponível, forçando o alinhamento à esquerda */
+        margin-bottom: 10px; 
+    }
+
+    /* Ajustes no nome e info do usuário */
+    .usuario-nome,
+    .usuario-user {
+        text-align: left; /* Alinha o texto à esquerda */
+        font-size: 1rem; 
+    }
+
+    .usuario-social {
+        display: block;
+        text-align: left; 
+    }
+
+    .usuario-social li {
+        margin-left: 15px;
+        margin: 5px 0; 
+        font-size: 0.85rem; 
+    }
+
+    .conteudo-principal {
+        width: 100%; 
+        padding: 15px; 
+        margin: 0;
+        max-width: 100%; /* Não ultrapassa a largura da tela */
+    }
+
+    .usuario-paragrafo {
+        padding-bottom: 10px;
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+
+    .carrossel-categorias-item {
+        width: 100%; /* O carrossel ocupa toda a largura da tela */
+        height: 150px;
+    }
+
+    .categorias-item {
+        flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+        justify-content: center; 
+        height: 150px;
+    }
+
+    .item {
+        min-width: 45%; 
+        text-align: center; 
+        margin: 5px 0; 
+    }
+
+    .container-carrossel2 {
+        width: 100%; /* Garante que o carrossel ocupe toda a largura da tela */
+    }
+
+    .projetos-item {
+        min-width: 18%; /* Aumenta o tamanho dos itens para caberem melhor em telas pequenas */
+        padding: 10px;
+        margin: 10px 0; 
+        height: 150px;
+        font-size: 0.70rem ;
+    }
+
+    .conteudo button {
+        font-size: 0.68rem; 
+        padding: 6px 10px; 
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+/* RESPOSSIVIDADE PARA TABLET E TELAS MÉDIAS (481px - 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .main-container-principal {
+        flex-direction: row; /* Mantém o layout em linha (side by side) */
+        padding: 20px;                    
+        justify-content: space-between;
+    }
+
+    .card-lateral {
+        width: 300px; /* Aumenta a largura do perfil lateral */
+        padding: 15px;                    
+        margin: 10px 0;                   
+        max-height: none; /* Remove a altura fixa */
+    }
+
+    .imagem {
+        width: 100px; /* Ajusta o tamanho da imagem do perfil */
+        height: 100px;
+        margin-left: 15px;               
+        margin-right: 20px;               
+    }
+
+    .usuario-nome, .usuario-user {
+        font-size: 1.1rem; 
+    }
+
+    .usuario-social li {
+        margin-left: 15px;               
+        font-size: 1rem;
+    }
+
+    .conteudo-principal {
+        width: 65%; /* Diminui a largura do conteúdo principal para deixar espaço para o perfil lateral */
+        padding: 20px;                   
+        max-width: 100%;/* ocupa toda a largura disponível */
+    }
+
+    .usuario-paragrafo {
+        padding-bottom: 15px;             
+        font-size: 1rem;            
+    }
+
+    /* CARROSSEL CATEGORIAS */
+    .carrossel-categorias-item {
+        width: 100%; /* O carrossel ocupa toda a largura disponível */
+        height: 180px; /* altura do carrossel */
+    }
+
+    .categorias-item {
+        justify-content: flex-start;  /* Alinha os itens à esquerda */
+        flex-wrap: wrap; /* Pquebra de linha dos item */
+        height: 180px;
+    }
+
+    .item {
+        min-width: 30%; /* largura dos itens do carrossel */
+        text-align: center;               
+        margin: 0 10px;          
+    }
+
+    /* CARROSSEL PROJETOS */
+    .container-carrossel2 {
+        width: 100%;   /* carrossel vai ocupar toda a largura */
+        margin-top: 20px;                 
+    }
+
+    .projetos-item {
+        min-width: 22%;   
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .projetos-item button {
+        width: 100%; /* botão vai ocupar toda a largura do item */
+        max-width: 200px;  /* define a largura do botão */
+        margin-top: 15px;                
+        font-size: 1rem;                
+        padding: 8px 20px;
+    }
+
+    .projetos-item button:hover {
+        background: #073763;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+}
