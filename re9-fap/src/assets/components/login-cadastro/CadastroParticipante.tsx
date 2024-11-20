@@ -1,9 +1,8 @@
 import './cadastros.css'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaRegUser, FaCheck} from "react-icons/fa";
 import { MdMailOutline, MdOutlinePassword } from "react-icons/md";
-// import validarcpf from './validarcpf';
-
+import axios from 'axios';
 
 function CadastroParticipante() {
 
@@ -13,8 +12,6 @@ function CadastroParticipante() {
         email: '',
         senha: ''
     })
-
-    const [finalizado, setFinalizado] = useState(false)
 
     const formatarcpf = (cpf:string) => {
         return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
@@ -29,22 +26,25 @@ function CadastroParticipante() {
         }))
     }
 
-    useEffect(()=>{
-        const isComplet = Object.values(info).every((val) => val.trim() !== '')
-        setFinalizado(isComplet);
-    }, [info])
+    const isComplet = Object.values(info).every((val) => val.trim() !== '')
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if(!finalizado) {
+        if(!isComplet) {
             alert('Preencha o todos os campos para prosseguir')
             return;
         }
 
-        console.log('informações passadas:' + info.cpf)
+        try {
+            const response = await axios.post('http://localhost:3000/participantes', info)
+            alert("cadastro Realizado com sucesso!")
+            console.log('Resposta do servidor:', response.data);
+        } catch (error) {
+            console.error('Erro ao enviar os dados:', error);
+            alert('Erro ao cadastrar. Tente novamente mais tarde.');
+          }
     }
-
 
     return(
         <>
