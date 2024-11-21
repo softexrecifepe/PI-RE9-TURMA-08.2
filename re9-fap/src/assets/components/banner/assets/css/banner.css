@@ -1,33 +1,27 @@
 .banner-container {
-  background-image: url('../img/banner.svg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  position: relative;
-  background-repeat: no-repeat;
-  background-color: #fff; 
-  transition: background-image 0.3s ease;
-  margin-top: 7vh;
+  display: flex; /* Flexbox para colocar a imagem à esquerda e o texto à direita */
+  justify-content: space-between; /* Cria espaço entre os dois elementos */
+  align-items: center; /* Alinha verticalmente no centro */
+  height: 80vh; /* Altura do banner */
+  margin-top: 10vh; /* Espaço superior */
+  padding: 0 20px; /* Adiciona um padding nas laterais */
+  background: rgb(102,217,102);
+  background: linear-gradient(180deg, rgba(102,217,102,1) 0%, rgba(255,255,255,1) 88%);
 }
 
 .banner-content {
   color: black;
-  text-align: left;
+  text-align: left; /* Alinha o texto à esquerda */
   padding: 10px;
-  max-width: 600px;
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
+  max-width: 50%; /* Limita a largura do conteúdo a 50% */
+  position: relative;
+  z-index: 1; /* Garante que o conteúdo do texto fique acima da imagem */
 }
 
 .logo-title-wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .banner-logo {
@@ -39,13 +33,13 @@
 .banner-title {
   font-size: 1.5rem;
   line-height: 1.2;
-  margin: 0; 
+  margin: 0;
 }
 
 .subtitle-section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   font-size: 3.5rem;
   font-weight: bold;
 }
@@ -55,27 +49,32 @@
   margin-bottom: 10px;
 }
 
+.banner-quote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
 .button-learn-more {
   margin-top: 20px;
-  border: 2px solid #e55b00; 
-  border-radius: 8px; 
+  border: 2px solid #e55b00;
+  border-radius: 8px;
   color: black;
-  padding: 12px 40px; 
+  padding: 12px 40px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-  min-width: 250px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
 }
 
 .button-learn-more:hover {
-  background-color: #e55b00; 
+  background-color: #e55b00;
 }
 
 .contact-details {
   display: flex;
-  gap: 28px; 
+  gap: 28px;
   font-size: 0.7rem;
   margin-top: 15px;
 }
@@ -86,33 +85,50 @@
 }
 
 .contact-icon {
-  margin-right: 10px; 
-  font-size: 1rem; 
+  margin-right: 10px;
+  font-size: 1rem;
 }
 
-/* Responsividade para telas menores */
+/* Imagem no lado esquerdo */
+.banner-image {
+  width: 50%; /* A imagem ocupa 50% da largura */
+  height: 100%; /* A imagem ocupa toda a altura */
+  background-image: url('../img/banneer.svg'); /* Define a imagem de fundo */
+  background-size: cover;
+  background-position: center center; /* Centraliza a imagem */
+  background-repeat: no-repeat;
+}
+
+/* Responsividade para telas menores (max-width 768px) */
 @media (max-width: 768px) {
   .banner-container {
-    background-image: linear-gradient(to bottom, rgb(233, 179, 138), white); 
-    background-size: 100%;
+    flex-direction: column; /* Empilha os elementos em telas menores */
+    padding: 10px; /* Ajusta o padding para telas menores */
   }
 
   .banner-content {
-    left: 20px;
-    top: 40%;
-    transform: translateY(-40%);
-    max-width: 90%;
+    max-width: 90%; /* Ajusta o tamanho do conteúdo */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do conteúdo */
+  }
+
+  .banner-image {
+    width: 100%; /* A imagem vai ocupar toda a largura */
+    height: 300px; /* Ajusta a altura da imagem */
   }
 }
 
 @media (max-width: 480px) {
   .banner-container {
-    background-image: none; 
+    background-image: none; /* Remove o fundo em telas pequenas */
   }
 
   .banner-content {
-    left: 10px;
-    max-width: 95%;
-    text-align: center;
+    max-width: 95%; /* Ajusta o tamanho do conteúdo */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .banner-image {
+    height: 200px; /* Ajusta a altura da imagem */
   }
 }

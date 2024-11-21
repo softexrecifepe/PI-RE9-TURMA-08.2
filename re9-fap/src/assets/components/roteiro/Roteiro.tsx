@@ -59,7 +59,7 @@ const Roteiro: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Seu Caminho para o Sucesso</h1>
+      <h1>O Match para o Sucesso</h1>
       <div className="cards">
         {cardData.map(({ number, title, text }, index) => (
           <motion.div

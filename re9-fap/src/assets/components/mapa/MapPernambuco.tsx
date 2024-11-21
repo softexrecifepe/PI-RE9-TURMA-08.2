@@ -52,9 +52,9 @@ const MapPernambuco = () => {
             Essa funcionalidade ajuda a conectar empresas locais e a promover 
             parcerias estratégicas entre instituições.
           </p>
-          <p>
+          {/* <p>
             Cadastre-se agora mesmo e faça parte da nossa rede de parceiros em Pernambuco!
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

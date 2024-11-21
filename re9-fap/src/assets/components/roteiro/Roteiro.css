@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 70vh;
-  background: url('folhas.jpg') no-repeat center;
+  background: url('folhaas.svg') no-repeat center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ h1 {
   margin-bottom: 40px;
   margin-top: 50px;
   color: black;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); */
 }
 
 .cards {

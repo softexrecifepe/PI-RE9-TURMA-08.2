@@ -4,6 +4,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000; /* Garante que a navbar fique sobre todo o conteúdo */
+  
 }
   
 .nav-bar {
