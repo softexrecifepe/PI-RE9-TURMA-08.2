@@ -1,115 +1,68 @@
-/* CONTAINER PRINCIPAL */
 .perfil-lateral-container {
-    width: 300px;
-    border: 1px solid #e1e4e8;
-    border-radius: 8px;
-    padding: 16px;
-    background-color: var(--cor-branca);
-    font-family: Arial, sans-serif;
-  }
-  
-  /* CABEÇALHO */
-  .perfil-lateral-header {
-    text-align: center;
-  }
-  
-  .perfil-lateral-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto;
-    border: 2px solid #d1d5da;
-  }
-  
-  .perfil-lateral-nome {
-    margin: 16px 0 4px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #24292f;
-  }
-  
-  .perfil-lateral-username {
-    font-size: 14px;
-    color: #586069;
-  }
-  
-  .perfil-lateral-bio {
-    margin: 8px 0;
-    font-size: 14px;
-    color: #24292f;
-  }
-  
-  .perfil-lateral-editar-botao {
-    margin-top: 12px;
-    padding: 8px 16px;
-    font-size: 14px;
-    color: var(--cor-verde);
-    background-color: #f3f4f6;
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .perfil-lateral-editar-botao:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 90vh;
+    padding: 24px;
     background-color: var(--cor-verde);
-    color: var(--cor-branca);
-    border: 1px solid var(--cor-verde);
-  }
-  
-  /* DETALHES */
-  .perfil-lateral-detalhes {
-    margin-top: 16px;
-  }
-  
-  .perfil-lateral-detalhe-item {
+    border-radius: 20px;
+}
+
+.perfil-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.perfil-header h2 {
+    font-size: 24px;
+    color: var(--cor-azul);
+}
+
+.perfil-header p {
+    color: var(--cor-azul);
+}
+
+.perfil-endereco, .perfil-email {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #586069;
-  }
-  
-  .perfil-lateral-icon {
-    margin-right: 8px;
-    color: var(--cor-verde);
-  }
-  
-  .perfil-lateral-detalhe-item a {
-    color: var(--cor-verde);
-    text-decoration: none;
-  }
-  
-  .perfil-lateral-detalhe-item a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ACHIEVEMENTS */
-  .perfil-lateral-achievements {
-    margin-top: 16px;
-  }
-  
-  .perfil-lateral-achievements h3 {
-    font-size: 16px;
-    color: #24292f;
-    margin-bottom: 8px;
-  }
-  
-  .perfil-lateral-achievements-badges {
+    margin-bottom: 15px;
+}
+
+.perfil-endereco p, .perfil-email p {
+    margin-left: 10px;
+    color: var(--cor-azul);
+}
+
+.achievements {
+    margin-top: 20px;
+}
+
+.achievements h3 {
+    font-size: 18px;
+    color: var(--cor-azul);
+    margin-bottom: 10px;
+}
+
+.achievements-list {
     display: flex;
-    gap: 12px;
-  }
-  
-  .perfil-lateral-badge {
+    gap: 10px;
+}
+
+.badge {
     width: 50px;
-    height: 50px;
+    transition: .3s;
     border-radius: 50%;
-    border: 1px solid #e1e4e8;
-    transition: transform 0.3s ease;
-  }
-  
-  .selo:hover .perfil-lateral-badge {
-    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
-    border-color: var(--cor-verde);
-  }
-  
+}
+
+.badge:hover {
+    border: 1px solid var(--cor-azul);
+    transform: scale(1.10);
+}
+
+.botao-logout {
+    border: 1px solid var(--cor-azul);
+    color: var(--cor-azul);
+    background-color: var(--cor-verde);
+    cursor: pointer;
+}

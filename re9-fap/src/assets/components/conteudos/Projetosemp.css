@@ -1,11 +1,14 @@
 /* CONTAINER GERAL */
 .projetos-container {
     flex: 1; /* Para ocupar o restante da largura */
+    height: 90vh;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--cor-branca);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    border: 1px solid var(--cor-verde);
+    border-radius: 20px;
   }
   
   /* CABEÇALHO */

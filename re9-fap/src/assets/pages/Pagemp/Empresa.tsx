@@ -1,12 +1,11 @@
-// import "./empresa.css"
-import imgprojeto from "./image/projetos/gerenciamento-de-projetos.png"
-import PerfilLateral from "../../components/perfil/Perfil"; 
+import "./empresa.css"
 import Projetosemp from "../../components/conteudos/Projetosemp";
+import PerfilLateralemp from "../../components/perfil/Perfilemp";
 
 const App = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "row", height: "100vh" }}>
-      <PerfilLateral />
+    <div className="main-container-principal">
+      <PerfilLateralemp />
       <Projetosemp />
     </div>
   );
