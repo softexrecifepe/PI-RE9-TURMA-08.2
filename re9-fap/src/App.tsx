@@ -5,25 +5,20 @@ import PagCadastro from './assets/pages/PagCadastro'
 import PagLogin from './assets/pages/PagLogin'
 import PagCadProjetos from './assets/pages/PagCadProjetos'
 import './App.css';
-import Empresa from './assets/components/telaEmpresa/Empresa';
-import Usuario from './assets/components/telaUsuario/Usuario'
+import Empresa from './assets/pages/Pagemp/Empresa';
+import Usuario from './assets/pages/Paguser/Usuario'
 
 function App() {
 
   return (
     <>
-    <div>
-      <Usuario/>
-    </div>
-
-
       <Router>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/cadastro' element={<PagCadastro/>}/>
           <Route path='/login' element={<PagLogin/>}/>
           <Route path='/cadprojeto' element={<PagCadProjetos/>}/>
-          <Route path='/pageuser' element={<Usuario/>}/>
+          <Route path='/paguser' element={<Usuario/>}/>
           <Route path='/pagempresa' element={<Empresa/>}/>
         </Routes>
       </Router> 
