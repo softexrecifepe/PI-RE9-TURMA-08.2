@@ -4,6 +4,9 @@ import Home from './assets/pages/Home'
 import PagCadastro from './assets/pages/PagCadastro'
 import PagLogin from './assets/pages/PagLogin'
 import PagCadProjetos from './assets/pages/PagCadProjetos'
+import './App.css';
+import Empresa from './assets/pages/Pagemp/Empresa';
+import Usuario from './assets/pages/Paguser/Usuario'
 
 function App() {
 
@@ -15,10 +18,12 @@ function App() {
           <Route path='/cadastro' element={<PagCadastro/>}/>
           <Route path='/login' element={<PagLogin/>}/>
           <Route path='/cadprojeto' element={<PagCadProjetos/>}/>
+          <Route path='/paguser' element={<Usuario/>}/>
+          <Route path='/pagempresa' element={<Empresa/>}/>
         </Routes>
-      </Router>
+      </Router> 
     </>
   )
 }
 
-export default App
+export default App;
