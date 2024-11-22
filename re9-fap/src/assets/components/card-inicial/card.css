@@ -1,68 +1,124 @@
+
+.cards-section h1 {
+  font-size: 2rem;
+  margin-bottom: 30px; /* Espaço entre o título e os cards */
+  color: black;
+  /* text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); */
+  text-align: center;
+  margin-top: -60px;
+
+}
+
 .container-inicial {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap; /* Permite quebra de linha */
+  gap: 70px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards no eixo horizontal */
+  max-width: 700px; /* Limita a largura do container */
+  margin: 0 auto; /* Centraliza o container */
 }
 
-.grid-A-iniciais{
-    width: 100%;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    padding-right: 4rem;
-    flex-wrap: wrap;
-}    
-.grid-B-iniciais{
-    width: 100%;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    padding-left: 4rem;
-    flex-wrap: wrap;
-}
-
-/* Estilos para os cards */
 .card-iniciais {
-    background-color: var(--cor-branca);
-    border: 1px solid var(--cor-laranja);
-    border-radius: 30px;
-    padding: 24px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 339px;
-
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    transition: all .2s;
+  background-color: var(--cor-branca);
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  opacity: 0; /* Invisível por padrão */
+  transform: translateX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.card-iniciais:hover {
-    transform: scale(1.05);
+/* Animação ao carregar */
+.card-iniciais:nth-child(1) {
+  background-color: #66d966;
+/* transform: translateX(-220px); Sai pela esquerda */
+margin-left: -200px; /* Move o primeiro card para a esquerda */
+
+}
+
+.card-iniciais:nth-child(2) {
+  background-color: #d9d9d9;
+  /* transform: translateX(-220px); Sai pela esquerda */
+  margin-left: -30px; /* Move o segundo card um pouco menos para a esquerda */
+  
+}
+
+.card-iniciais:nth-child(3) {
+  background-color: #66d966;
+  /* transform: translateX(220px); Sai pela direita */
+  margin-right: -30px; /* Move o terceiro card um pouco para a direita */
+
+}
+
+.card-iniciais:nth-child(4) {
+  background-color: #d9d9d9;
+  /* transform: translateX(220px); Sai pela direita */
+    margin-right: -200px; /* Move o quarto card mais para a direita */
+}
+
+
+.card-iniciais.animate {
+  opacity: 1; /* Aparece */
+  transform: translateX(0); /* Volta para o lugar */
 }
 
 .card-iniciais h2 {
-    text-align: center;
+  font-size: 20px; /* Diminui o tamanho da fonte */
+  font-weight: bold;
+  text-align: center; /* Centraliza o texto dentro do card */
+  margin-bottom: 10px; /* Espaço entre o título e o conteúdo */
 }
 
-.card-iniciais p {
-    text-align: center;
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-220px); /* Vem da esquerda */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Fica no lugar */
+    opacity: 1;
+  }
 }
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(220px); /* Vem da direita */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Fica no lugar */
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
 @media screen and (max-width: 815px) {
-    .grid-A-iniciais {
-        padding-right: 0;
-    }
+  .container-inicial {
+    flex-direction: column; /* Empilha os cards em uma coluna */
+    gap: 20px; /* Reduz o espaçamento entre os cards */
+    padding: 0 20px;
+  }
 
-    .grid-B-iniciais {
-        padding-left: 0;
-    }
+  .card-iniciais {
+    width: 100%; /* Ocupa toda a largura disponível */
+  }
 
-    .card-iniciais {
-        width: 100%;
-    }
+  
+.card-iniciais:nth-child(1) {
+margin-left: 10px;
+
 }
+
+.card-iniciais:nth-child(2) {
+ 
+  margin-left: 5px; 
+  
+}
+}
+

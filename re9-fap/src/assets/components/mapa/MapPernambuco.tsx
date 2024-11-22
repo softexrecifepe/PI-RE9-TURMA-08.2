@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./mapPernambuco.css";
 
+
 interface Endereco {
   rua: string;
   numero: string;
@@ -39,10 +40,14 @@ const MapPernambuco = () => {
     buscarEmpresas();
   }, []);
 
+
   return (
     <section className="map-section">
       <h1>Encontre nossos parceiros</h1>
-      <MapContainer
+      <div className="map-wrapper">
+        {/* Mapa à esquerda */}
+        <div className="map-container">
+         <MapContainer
         center={centerPosition}
         zoom={7}
         scrollWheelZoom={false}
@@ -69,8 +74,25 @@ const MapPernambuco = () => {
           </Marker>
         ))}
       </MapContainer>
+        </div>
+
+        {/* Texto explicativo à direita */}
+        <div className="map-text">
+          <h2>Como funciona?</h2>
+          <p>
+            Quando você cadastra sua empresa, ela automaticamente será exibida 
+            no mapa, permitindo que outras pessoas a encontrem com facilidade. 
+            Essa funcionalidade ajuda a conectar empresas locais e a promover 
+            parcerias estratégicas entre instituições.
+          </p>
+          {/* <p>
+            Cadastre-se agora mesmo e faça parte da nossa rede de parceiros em Pernambuco!
+          </p> */}
+        </div>
+      </div>
     </section>
   );
 };
 
 export default MapPernambuco;
+

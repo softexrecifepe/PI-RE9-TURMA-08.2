@@ -1,5 +1,5 @@
 .banner-container {
-  background-image: url('../img/banner.png');
+  background-image: url('../img/banner.svg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -53,6 +53,10 @@
 .subtitle-highlight {
   color: #ff6600;
   margin-bottom: 10px;
+}
+
+.subtitle-regular{
+  margin-top: -20px ;
 }
 
 .button-learn-more {
