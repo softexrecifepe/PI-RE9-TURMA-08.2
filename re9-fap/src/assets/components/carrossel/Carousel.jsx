@@ -3,6 +3,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css'; 
+import logo1 from './logo1.svg';
+import logo2 from './logo2.svg';
+import logo3 from './logo3.svg';
+import logo4 from './logo4.svg';
+import logo5 from './logo5.svg';
 
 const Carousel = () => {
   const settings = {
@@ -17,11 +22,11 @@ const Carousel = () => {
   };
 
   const logos = [
-    'logo1.svg',
-    'logo2.svg',
-    'logo3.svg',
-    'logo4.svg',
-    'logo5.svg',
+    logo1,
+    logo2,
+    logo3,
+    logo4,
+    logo5,
   ];
 
   return (
