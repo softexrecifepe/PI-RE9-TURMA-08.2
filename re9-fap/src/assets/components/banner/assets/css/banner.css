@@ -1,16 +1,41 @@
 .banner-container {
-  background-image: url('../img/banner.svg');
-  background-size: cover;
-  background-position: center;
+  position: relative; 
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80vh;
-  position: relative;
-  background-repeat: no-repeat;
-  background-color: #fff; 
-  transition: background-image 0.3s ease;
   margin-top: 7vh;
+  background-color: #fff; 
+}
+
+.banner-container::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://s2-galileu.glbimg.com/-JZEkhn8PFqEI-D7ZFR_HajbOFg=/0x0:1920x1280/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_fde5cd494fb04473a83fa5fd57ad4542/internal_photos/bs/2022/Z/Y/Hj508jQ0iDFga4hziHHQ/israel-andrade-yi-9sivvt-s-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.banner-container::after {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/banner.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1; 
+  z-index: 2;
 }
 
 .banner-content {
@@ -23,6 +48,19 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+
+/* .banner-content {
+  color: black;
+  text-align: left;
+  padding: 10px;
+  max-width: 600px;
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+} */
 
 .logo-title-wrapper {
   display: flex;
@@ -37,10 +75,12 @@
 }
 
 .banner-title {
-  font-size: 1.5rem;
-  line-height: 1.2;
-  margin: 0; 
+  font-size: 3rem; 
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: -20px;
 }
+
 
 .subtitle-section {
   display: flex;
@@ -51,9 +91,11 @@
 }
 
 .subtitle-highlight {
+  font-size: 2rem; 
   color: #ff6600;
   margin-bottom: 10px;
 }
+
 
 .subtitle-regular{
   margin-top: -20px ;
@@ -94,10 +136,9 @@
   font-size: 1rem; 
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .banner-container {
-    background-image: linear-gradient(to bottom, rgb(233, 179, 138), white); 
+    /* background-image: linear-gradient(to bottom, rgb(233, 179, 138), white);  */
     background-size: 100%;
   }
 
@@ -107,16 +148,24 @@
     transform: translateY(-40%);
     max-width: 90%;
   }
+
+.banner-quote{
+  font-size: 0.7rem;
+}
 }
 
 @media (max-width: 480px) {
   .banner-container {
-    background-image: none; 
+    height: auto;
+    margin-top: 4vh;
+    padding: 20px;
   }
 
   .banner-content {
-    left: 10px;
-    max-width: 95%;
+    left: 0;
+    max-width: 100%;
     text-align: center;
+    transform: none;
+    padding: 10px;
   }
 }

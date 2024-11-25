@@ -1,5 +1,4 @@
 import './assets/css/banner.css'; 
-import logo from '../../img/logo.svg';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 
@@ -8,12 +7,10 @@ const Banner: React.FC = () => {
     <div className="banner-container">
       <div className="banner-content">
         <div className="logo-title-wrapper">
-          <img src={logo} alt="Logo" className="banner-logo" />
           <h1 className="banner-title">Re9ção</h1>
         </div>
         <div className="subtitle-section">
-          <span className="subtitle-highlight">Soluções</span>
-          <span className="subtitle-regular">Integradas</span>
+          <span className="subtitle-highlight">Soluções Integradas </span>
         </div>
         <p className="banner-quote">
           “Unir-se é um bom começo, manter a união é um progresso, <br /> e trabalhar em conjunto é a vitória.” (Henry Ford)
