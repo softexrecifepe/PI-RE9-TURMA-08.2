@@ -13,9 +13,9 @@
 .map-wrapper {
   display: flex;
   gap: 20px;
-  align-items: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; 
   justify-content: center;
-  margin: 0 45px; /* Adiciona margem lateral para evitar que os elementos fiquem colados nas bordas */
+  margin: 0 45px; 
 }
 
 /* Mapa */
@@ -37,14 +37,14 @@
 .map-text {
   flex: 1;
   max-width: 400px;
-  text-align: justify; /* Justifica o texto */
-  margin: auto; /* Centraliza o conteúdo verticalmente em relação ao mapa */
+  text-align: justify; 
+  margin: auto; 
 }
 
 .map-text h2 {
   font-size: 1.5em;
   margin-bottom: 15px;
-  text-align: center; /* Centraliza o título */
+  text-align: center; 
 }
 
 .map-text p {
@@ -56,35 +56,35 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .map-wrapper {
-    flex-direction: column; /* Alinha os itens em uma coluna */
+    flex-direction: column; 
     align-items: center;
   }
 
   .map-container {
-    height: 300px; /* Diminui a altura do mapa */
-    width: 90%; /* Reduz a largura do mapa */
+    height: 300px; 
+    width: 90%; 
   }
 
   .map-text {
     text-align: justify;
     max-width: 90%;
-    margin: 0 auto; /* Centraliza o texto para telas menores */
+    margin: 0 auto; 
   }
 }
 
 @media (max-width: 480px) {
   .map-wrapper {
-    flex-direction: column; /* Mapa e texto em coluna */
-    gap: 10px; /* Reduz o espaçamento entre mapa e texto */
+    flex-direction: column; 
+    gap: 10px; 
   }
 
   .map-container {
-    width: 100%; /* Mapa ocupa toda a largura */
-    height: 200px; /* Reduz a altura ainda mais */
+    width: 100%; 
+    height: 200px; 
   }
 
   .map-text {
     padding: 10px;
-    font-size: 0.9rem; /* Texto um pouco menor */
+    font-size: 0.9rem; 
   }
 }

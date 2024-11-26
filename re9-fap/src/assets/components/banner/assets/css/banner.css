@@ -1,3 +1,4 @@
+/* Container principal do banner */
 .banner-container {
   position: relative; 
   display: flex;
@@ -8,6 +9,7 @@
   background-color: #fff; 
 }
 
+/* Adiciona uma imagem de fundo com opacidade reduzida */
 .banner-container::before {
   content: ''; 
   position: absolute;
@@ -23,6 +25,7 @@
   z-index: 1;
 }
 
+/* Sobrepõe outra imagem de fundo com opacidade total */
 .banner-container::after {
   content: ''; 
   position: absolute;
@@ -38,6 +41,7 @@
   z-index: 2;
 }
 
+/* Estilos do conteúdo do banner */
 .banner-content {
   color: black;
   text-align: left;
@@ -49,31 +53,12 @@
   transform: translateY(-50%);
 }
 
-
-
-/* .banner-content {
-  color: black;
-  text-align: left;
-  padding: 10px;
-  max-width: 600px;
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-} */
-
+/* Estilos título */
 .logo-title-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 20px; 
 }
-
-.banner-logo {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-}
-
 .banner-title {
   font-size: 3rem; 
   line-height: 1.4;
@@ -81,7 +66,7 @@
   margin-bottom: -20px;
 }
 
-
+/* Estilos para o subtítulo */
 .subtitle-section {
   display: flex;
   flex-direction: column;
@@ -95,12 +80,11 @@
   color: #ff6600;
   margin-bottom: 10px;
 }
-
-
 .subtitle-regular{
   margin-top: -20px ;
 }
 
+/* Estilos para o botão "Saiba +" */
 .button-learn-more {
   margin-top: 20px;
   border: 2px solid #e55b00; 
@@ -119,6 +103,7 @@
   background-color: #e55b00; 
 }
 
+/* Estilos para os detalhes de contato */
 .contact-details {
   display: flex;
   gap: 28px; 
@@ -136,9 +121,9 @@
   font-size: 1rem; 
 }
 
+/* Estilos responsivos para telas menores */
 @media (max-width: 768px) {
   .banner-container {
-    /* background-image: linear-gradient(to bottom, rgb(233, 179, 138), white);  */
     background-size: 100%;
   }
 
