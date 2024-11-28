@@ -6,7 +6,7 @@
   
   button {
     padding: 6px 12px;
-    border-radius: 24px;
+    border-radius: 6px;
   }
   
   button:hover {
@@ -15,12 +15,12 @@
   
   .primary-button {
     color: var(--cor-branca);
-    background-color: var(--cor-laranja);
-    border: 1px solid var(--cor-branca);
+    background-color: var(--cor-laranja); 
+    border: 1px solid var(--cor-laranja);
   }
   
   .secundary-button {
-    color: var(--cor-laranja);
-    background-color: var(--cor-branca);
-    border: 1px solid var(--cor-laranja);
+    color: var(--cor-branca);
+    background-color: var(--cor-azul);
+    border: 1px solid var(--cor-azul);
   }
