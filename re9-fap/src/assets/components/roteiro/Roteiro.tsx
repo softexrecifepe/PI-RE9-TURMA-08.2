@@ -5,6 +5,7 @@ import './assets/css/Roteiro.css';
 /**
  * Componente Roteiro
  * 
+ * Atualização para repositório.
  * Este componente exibe uma sequência de cards que detalham o processo do usuário
  * em um fluxo de cadastro e acompanhamento de projetos. Cada card é animado 
  * quando entra na tela, utilizando o `framer-motion` e o `IntersectionObserver`.
